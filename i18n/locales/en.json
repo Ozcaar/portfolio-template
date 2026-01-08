@@ -43,7 +43,7 @@
         "repos": "Public Repositories",
         "stars": "Stars",
         "recientActivity": "Activity (30d)",
-        "topLanguages": "Top Languages",
+        "topLanguages": "My GitHub Top Languages",
         "error": "Failed to load GitHub data."
       },
       "experience": {

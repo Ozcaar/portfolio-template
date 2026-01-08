@@ -43,7 +43,7 @@
                 "repos": "Repos públicos",
                 "stars": "Stars",
                 "recientActivity": "Actividad (30d)",
-                "topLanguages": "Top Lenguajes",
+                "topLanguages": "Mis principales lenguajes en GitHub",
                 "error": "No se pudo cargar GitHub."
             },
             "experience": {
