@@ -1,0 +1,156 @@
+{
+  "seo": {
+    "home": {
+      "title": "Oscar López - Full Stack Developer",
+      "description": "Full Stack Developer specialized in modern applications"
+    }
+  },
+  "common": {
+    "buttons": {
+      "getInTouch": "Get in Touch",
+      "viewMyWork": "View My Work",
+      "viewAllProjects": "View All Projects",
+      "viewOnGitHub": "View on GitHub",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "sended": "Message Sent!",
+      "copyEmail": "Copy Email",
+      "copiedEmail": "Email Copied!"
+    },
+    "nav": {
+      "projects": "Projects",
+      "about": "About Me",
+      "contact": "Contact",
+      "backToHome": "Back to Home"
+    }
+  },
+  "home": {
+    "hero": {
+      "intro": {
+        "role": "Full Stack Developer",
+        "title": "Building modern and scalable web applications.",
+        "subtitle": "Specialized in DDD, microservices, and thoughtful design patterns."
+      },
+      "techStack": {
+        "title": "Tech Stack",
+        "footer": "Always learning and exploring"
+      },
+      "openSource": {
+        "title": "GitHub Stats",
+        "projects": "{count}+ projects",
+        "experience": "{count}+ years of experience",
+        "years": "Years on GitHub",
+        "repos": "Public Repositories",
+        "stars": "Stars",
+        "recientActivity": "Activity (30d)",
+        "topLanguages": "Top Languages",
+        "error": "Failed to load GitHub data."
+      },
+      "experience": {
+        "title": "Experience"
+      },
+      "cta": {
+        "kicker": "Let’s Work Together!",
+        "availability": "Available",
+        "paragraph": "I build modern, scalable, and well-designed web applications so your project can grow with confidence.",
+        "bullet1": "Clear and direct communication.",
+        "bullet2": "Consistent and visible progress.",
+        "bullet3": "Clean, well-structured, and maintainable code.",
+        "bullet4": "User experience comes first."
+      }
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "description": "A selection of projects showcasing modern full-stack development practices, thoughtful architecture, and attention to detail."
+    }
+  },
+  "about": {
+    "header": {
+      "badge": "ABOUT ME",
+      "subtitle": "Full stack developer passionate about building elegant, scalable solutions with solid architecture and modern technologies."
+    },
+    "resume": {
+      "title": "My Journey",
+      "paragraph1": "I began my development journey over {years} years ago, starting with frontend development and gradually expanding into full-stack engineering. My passion for clean code and system design led me to deeply study architectural patterns and Domain-Driven Design.",
+      "paragraph2": "Today, I specialize in building microservices architectures, developing real-time applications, and creating scalable systems that stand the test of time. I strongly believe in the power of thoughtful design and clean abstractions.",
+      "paragraph3": "Beyond coding, I enjoy sharing knowledge through writing, contributing to open-source projects, and mentoring junior developers. The web is constantly evolving — and so am I."
+    },
+    "coreExpertise": {
+      "title": "Core Expertise"
+    },
+    "experienceTimeline": {
+      "title": "Experience Timeline"
+    },
+    "coreValues": {
+      "title": "Core Values",
+      "values": {
+        "quality": {
+          "title": "Quality First",
+          "desc": "I prioritize code quality and long-term maintainability."
+        },
+        "collaboration": {
+          "title": "Innovation & Continuous Learning",
+          "desc": "Always exploring new technologies and better approaches."
+        },
+        "continuousLearning": {
+          "title": "Collaboration",
+          "desc": "Great products are built through teamwork and clear communication."
+        }
+      }
+    },
+    "cta": {
+      "kicker": "Interested in working together?",
+      "button": "Get in Touch"
+    }
+  },
+  "contact": {
+    "header": {
+      "badge": "CONTACT",
+      "title": "Let’s Work Together",
+      "description": "Have a project in mind or looking for someone to join your team?\nI’d love to hear from you. Reach out and let’s create something amazing."
+    },
+    "form": {
+      "title": "Send Me a Message",
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your{'@'}email.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "What is your project about?"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell me more about your project, timeline, budget, and any relevant details..."
+      },
+      "successMessage": "Thank you for your message! I’ll get back to you soon.",
+      "errorMessage": "Failed to send the message. Please try again later."
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "email": "Feel free to reach out via email or connect with me on social media.",
+      "address": {
+        "label": "Location",
+        "value": "Remote / GMT-6"
+      },
+      "availability": {
+        "label": "Availability",
+        "value": "Mon – Fri, 9:00 AM – 6:00 PM"
+      }
+    },
+    "socialMedia": {
+      "title": "Social Media"
+    },
+    "quickResponse": {
+      "title": "Quick Response",
+      "description": "I usually reply within 24–48 hours. For urgent projects, please mention it in the subject line."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    }
+  }
+}

@@ -1,0 +1,253 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Dark mode palette */
+  --background: oklch(0.14 0.01 240);
+  --foreground: oklch(0.92 0.005 240);
+  --card: oklch(0.18 0.01 240);
+  --card-foreground: oklch(0.92 0.005 240);
+  --popover: oklch(0.18 0.01 240);
+  --popover-foreground: oklch(0.92 0.005 240);
+
+  /* Brighter blue for dark mode visibility */
+  --primary: oklch(0.65 0.18 240);
+  --primary-foreground: oklch(0.14 0.01 240);
+
+  /* Teal/cyan accent for dark mode */
+  --secondary: oklch(0.68 0.16 180);
+  --secondary-foreground: oklch(0.14 0.01 240);
+
+  --muted: oklch(0.25 0.01 240);
+  --muted-foreground: oklch(0.62 0.01 240);
+  --accent: oklch(0.68 0.15 310);
+  --accent-foreground: oklch(0.14 0.01 240);
+
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.95 0.005 25);
+
+  --border: oklch(0.28 0.01 240);
+  --input: oklch(0.22 0.01 240);
+  --ring: oklch(0.65 0.18 240);
+
+  /* Dark mode chart colors */
+  --chart-1: oklch(0.65 0.18 240);
+  --chart-2: oklch(0.68 0.16 180);
+  --chart-3: oklch(0.7 0.2 285);
+  --chart-4: oklch(0.72 0.17 200);
+  --chart-5: oklch(0.67 0.14 320);
+
+  --radius: 0.625rem;
+
+  /* Dark sidebar */
+  --sidebar: oklch(0.16 0.01 240);
+  --sidebar-foreground: oklch(0.92 0.005 240);
+  --sidebar-primary: oklch(0.65 0.18 240);
+  --sidebar-primary-foreground: oklch(0.14 0.01 240);
+  --sidebar-accent: oklch(0.68 0.16 180);
+  --sidebar-accent-foreground: oklch(0.14 0.01 240);
+  --sidebar-border: oklch(0.28 0.01 240);
+  --sidebar-ring: oklch(0.65 0.18 240);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-poppins: "Poppins", system-ui, -apple-system, sans-serif;
+  --font-mono: "Geist Mono", system-ui, -apple-system, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: oklch(95% 0 0);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: oklch(0.65 0.18 240);
+  --color-primary-content: oklch(0.14 0.01 240);
+  --color-secondary: oklch(0.68 0.16 180);
+  --color-secondary-content: oklch(0.14 0.01 240);
+  --color-accent: oklch(0.68 0.15 310);
+  --color-accent-content: oklch(0.14 0.01 240);
+  --color-neutral: oklch(0.25 0.01 240);
+  --color-neutral-content: oklch(0.62 0.01 240);
+  --color-info: oklch(0.97 0.01 280);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(0.750 0.177 163.2);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(0.577 0.245 27.325);
+  --color-error-content: oklch(0.985 0 0);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-poppins font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-poppins font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-poppins font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-poppins font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-linear-to-r from-primary via-secondary to-primary bg-clip-text text-transparent;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(100, 140, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(100, 140, 255, 0.5);
+  }
+}
+
+/* Page / Layout transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.input {
+  --input-color: var(--color-neutral);
+}
+
+.input-primary:is(:focus, :focus-within) {
+  --input-color: var(--color-primary);
+}
+.input-secondary:is(:focus, :focus-within) {
+  --input-color: var(--color-secondary);
+}
+.input-accent:is(:focus, :focus-within) {
+  --input-color: var(--color-accent);
+}

@@ -1,0 +1,156 @@
+{
+    "seo": {
+        "home": {
+            "title": "Oscar López - Full Stack Developer",
+            "description": "Desarrollador Full Stack especializado en aplicaciones modernas"
+        }
+    },
+    "common": {
+        "buttons": {
+            "getInTouch": "Contáctame",
+            "viewMyWork": "Ver mi trabajo",
+            "viewAllProjects": "Ver todos los proyectos",
+            "viewOnGitHub": "Ver en GitHub",
+            "submit": "Enviar mensaje",
+            "sending": "Enviando...",
+            "sended": "¡Mensaje enviado!",
+            "copyEmail": "Copiar correo",
+            "copiedEmail": "¡Correo copiado!"
+        },
+        "nav": {
+            "projects": "Proyectos",
+            "about": "Sobre mí",
+            "contact": "Contacto",
+            "backToHome": "Volver al inicio"
+        }
+    },
+    "home": {
+        "hero": {
+            "intro": {
+                "role": "Desarrollador Full Stack",
+                "title": "Creando aplicaciones web modernas y escalables.",
+                "subtitle": "Especializado en DDD, microservicios y patrones de diseño bien pensados."
+            },
+            "techStack": {
+                "title": "Stack Tecnológico",
+                "footer": "Siempre aprendiendo y explorando"
+            },
+            "openSource": {
+                "title": "GitHub Stats",
+                "projects": "{count}+ proyectos",
+                "experience": "{count}+ años de experiencia",
+                "years": "Años en GitHub",
+                "repos": "Repos públicos",
+                "stars": "Stars",
+                "recientActivity": "Actividad (30d)",
+                "topLanguages": "Top Lenguajes",
+                "error": "No se pudo cargar GitHub."
+            },
+            "experience": {
+                "title": "Experiencia"
+            },
+            "cta": {
+                "kicker": "¡Trabajemos Juntos!",
+                "availability": "Disponible",
+                "paragraph": " aplicaciones web modernas, escalables y bien diseñadas para que tu proyecto crezca con confianza.",
+                "bullet1": "Comunicación clara y directa.",
+                "bullet2": "Avances constantes y visibles.",
+                "bullet3": "Trabajo ordenado y de fácil mantenimiento.",
+                "bullet4": "Experiencia de usuario primero."
+            }
+        },
+        "projects": {
+            "title": "Proyectos Destacados",
+            "description": "Una selección de proyectos que muestran prácticas modernas de desarrollo full stack, arquitectura bien pensada y atención al detalle."
+        }
+    },
+    "about": {
+        "header": {
+            "badge": "SOBRE MÍ",
+            "subtitle": "Desarrollador full stack apasionado por crear soluciones elegantes y escalables con una arquitectura sólida y tecnologías modernas."
+        },
+        "resume": {
+            "title": "Mi Trayectoria",
+            "paragraph1": "Comencé mi camino en el desarrollo hace más de {years} años, iniciando en el frontend y expandiéndome gradualmente hacia la ingeniería full stack. Mi pasión por el código limpio y el diseño de sistemas me llevó a estudiar a fondo los patrones de arquitectura y Domain-Driven Design.",
+            "paragraph2": "Hoy me especializo en construir arquitecturas de microservicios, desarrollar aplicaciones en tiempo real y crear sistemas escalables que perduran en el tiempo. Creo firmemente en el poder del diseño consciente y las abstracciones limpias.",
+            "paragraph3": "Más allá de programar, me gusta compartir conocimiento escribiendo, contribuyendo a proyectos de código abierto y mentorando a desarrolladores junior. La web evoluciona constantemente, y yo también."
+        },
+        "coreExpertise": {
+            "title": "Experiencia Principal"
+        },
+        "experienceTimeline": {
+            "title": "Línea de Tiempo de Experiencia"
+        },
+        "coreValues": {
+            "title": "Valores Principales",
+            "values": {
+                "quality": {
+                    "title": "Calidad Primero",
+                    "desc": "Prioritizo la calidad del código y su mantenibilidad a largo plazo."
+                },
+                "collaboration": {
+                    "title": "Innovación y Aprendizaje Continuo",
+                    "desc": "Siempre explorando nuevas tecnologías y mejores enfoques."
+                },
+                "continuousLearning": {
+                    "title": "Colaboración",
+                    "desc": "Los grandes productos se construyen mediante el trabajo en equipo y una buena comunicación."
+                }
+            }
+        },
+        "cta": {
+            "kicker": "¿Te interesa trabajar juntos?",
+            "button": "Contáctame"
+        }
+    },
+    "contact": {
+        "header": {
+            "badge": "CONTACTO",
+            "title": "Trabajemos juntos",
+            "description": "¿Tienes un proyecto en mente o buscas a alguien para tu equipo?\nMe encantaría escucharte. Contáctame y creemos algo increíble."
+        },
+        "form": {
+            "title": "Envíame un Mensaje",
+            "name": {
+                "label": "Nombre",
+                "placeholder": "Tu nombre"
+            },
+            "email": {
+                "label": "Correo electrónico",
+                "placeholder": "tu{'@'}email.com"
+            },
+            "subject": {
+                "label": "Asunto",
+                "placeholder": "¿De qué trata tu proyecto?"
+            },
+            "message": {
+                "label": "Mensaje",
+                "placeholder": "Cuéntame más sobre tu proyecto, tiempos, presupuesto y cualquier detalle relevante..."
+            },
+            "successMessage": "¡Gracias por tu mensaje! Te responderé pronto.",
+            "errorMessage": "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
+        },
+        "contactInfo": {
+            "title": "Información de Contacto",
+            "email": "No dudes en escribirme por correo o conectar conmigo en redes sociales.",
+            "address": {
+                "label": "Ubicación",
+                "value": "Remoto / GMT-6"
+            },
+            "availability": {
+                "label": "Disponibilidad",
+                "value": "Lun - Vie, 9:00 AM - 6:00 PM"
+            }
+        },
+        "socialMedia": {
+            "title": "Redes Sociales"
+        },
+        "quickResponse": {
+            "title": "Respuesta rápida",
+            "description": "Normalmente respondo en un plazo de 24 a 48 horas. Para proyectos urgentes, indícalo en el asunto."
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes"
+        }
+    }
+}
