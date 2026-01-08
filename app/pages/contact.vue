@@ -106,7 +106,7 @@
 
                 <!-- Email row -->
                 <div :class="[infoRow, 'justify-between']">
-                  <a :href="`mailto:${SOCIAL_LINKS.email}`" class="flex min-w-0 items-center gap-3">
+                  <a :href="`mailto:${socialLinksContent.email}`" class="flex min-w-0 items-center gap-3">
                     <div class="mt-0.5 shrink-0">
                       <Icon name="lucide:mail" size="20" class="text-primary" />
                     </div>
@@ -114,7 +114,7 @@
                     <div class="min-w-0">
                       <p :class="infoLabel">Email</p>
                       <p class="truncate text-sm text-foreground transition-smooth group-hover:text-primary">
-                        {{ SOCIAL_LINKS.email }}
+                        {{ socialLinksContent.email }}
                       </p>
                     </div>
                   </a>
@@ -181,7 +181,7 @@
           <h2 :class="faqTitle">{{ t('contact.faq.title') }}</h2>
 
           <div class="divide-y divide-border space-y-1">
-            <details v-for="(item, idx) in FAQ_ITEMS" :key="idx" class="group cursor-pointer py-5">
+            <details v-for="(item, idx) in faq" :key="idx" class="group cursor-pointer py-5">
               <summary :class="faqSummary">
                 <span>{{ item.q }}</span>
 
@@ -205,8 +205,9 @@
 
 <script setup lang="ts">
 import type { SocialItem } from '~/types/SocialItem'
-import { SOCIAL_LINKS } from '~/constants/social'
-import { FAQ_ITEMS } from '~/constants/faqs'
+import type { SocialLinks as SocialLinksType } from '~/content/content.schema'
+
+const { faq, socialLinks: socialLinksContent } = useContent<{ socialLinks: SocialLinksType }>()
 
 const { t, locale } = useI18n()
 
@@ -273,7 +274,7 @@ const faqSummary =
 // Actions
 async function copyEmail() {
   try {
-    await navigator.clipboard.writeText(SOCIAL_LINKS.email)
+    await navigator.clipboard.writeText(socialLinksContent.value.email)
     copied.value = true
     clearTimeout(timeout)
     timeout = window.setTimeout(() => (copied.value = false), 2000)
@@ -312,19 +313,19 @@ const socialItems = computed<SocialItem[]>(() => [
   {
     icon: 'lucide:github',
     label: 'GitHub',
-    href: SOCIAL_LINKS.github,
+    href: socialLinksContent.value.github,
     color: 'hover:bg-accent/10 hover:border-accent/50 hover:text-accent',
   },
   {
     icon: 'lucide:linkedin',
     label: 'LinkedIn',
-    href: SOCIAL_LINKS.linkedin,
+    href: socialLinksContent.value.linkedin,
     color: 'hover:bg-primary/10 hover:border-primary/50 hover:text-primary',
   },
   {
     icon: 'lucide:mail',
     label: 'Email',
-    href: 'mailto:' + SOCIAL_LINKS.email,
+    href: 'mailto:' + socialLinksContent.value.email,
     color: 'hover:bg-secondary/10 hover:border-secondary/50 hover:text-secondary',
   },
 ])

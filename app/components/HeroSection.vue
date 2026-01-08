@@ -41,7 +41,7 @@
             </h3>
 
             <div class="flex flex-wrap gap-2">
-              <span v-for="tech in TECH_STACK" :key="tech" :class="techChip">
+              <span v-for="tech in techStack" :key="tech" :class="techChip">
                 {{ tech }}
               </span>
             </div>
@@ -62,7 +62,7 @@
           </h2>
 
           <div class="h-fit space-y-5 pr-2 md:overflow-y-auto">
-            <div v-for="exp in EXPERIENCE" :key="exp.company" class="space-y-1">
+            <div v-for="exp in experience" :key="exp.company" class="space-y-1">
               <p class="text-sm font-semibold text-secondary">
                 {{ exp.role }}
                 <span class="text-xs text-muted-foreground">
@@ -125,8 +125,9 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { TECH_STACK, EXPERIENCE } from '~/constants/experience'
-import { SOCIAL_LINKS } from '~/constants/social'
+import type { SocialLinks as SocialLinksType } from '~/content/content.schema'
+
+const { techStack, experience, socialLinks: socialLinksContent } = useContent<{ socialLinks: SocialLinksType }>()
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -143,19 +144,19 @@ const socialLinks = computed(() => [
   {
     icon: 'lucide:github',
     label: 'GitHub',
-    to: SOCIAL_LINKS.github,
+    to: socialLinksContent.value.github,
     hover: 'hover:text-accent hover:border-accent/50',
   },
   {
     icon: 'lucide:linkedin',
     label: 'LinkedIn',
-    to: SOCIAL_LINKS.linkedin,
+    to: socialLinksContent.value.linkedin,
     hover: 'hover:text-primary hover:border-primary/50',
   },
   {
     icon: 'lucide:mail',
     label: 'Email',
-    to: 'mailto:' + SOCIAL_LINKS.email,
+    to: `mailto:${socialLinksContent.value.email}`,
     hover: 'hover:text-secondary hover:border-secondary/50',
   },
 ])

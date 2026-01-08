@@ -1,13 +1,13 @@
 <template>
   <div class="overflow-y-auto">
-    
+
     <!-- Card Header -->
     <div class="mb-2 flex items-center justify-between font-poppins">
       <h3 class="text-base font-semibold text-primary">
         {{ t('home.hero.openSource.title') }}
       </h3>
 
-      <NuxtLink :to="SOCIAL_LINKS.github" target="_blank" :class="headerLink">
+      <NuxtLink :to="socialLinksContent.github" target="_blank" :class="headerLink">
         {{ t('common.buttons.viewOnGitHub') }}
         <Icon name="lucide:external-link" size="12" />
       </NuxtLink>
@@ -25,7 +25,7 @@
 
     <!-- Ready -->
     <div v-else-if="ready">
-      
+
       <!-- Stats -->
       <div class="mb-4 grid grid-cols-2 gap-3">
         <div v-for="stat in statsItems" :key="stat.key" :class="statCard">
@@ -76,7 +76,9 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { SOCIAL_LINKS } from '~/constants/social'
+import type { SocialLinks as SocialLinksType } from '~/content/content.schema'
+
+const { socialLinks: socialLinksContent } = useContent<{ socialLinks: SocialLinksType }>()
 
 const { t } = useI18n()
 const { data, pending, error } = useGithubSummary()

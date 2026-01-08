@@ -41,7 +41,7 @@
             </h3>
 
             <div class="space-y-4">
-              <div v-for="item in CORE_EXPERTISE" :key="item.title"
+              <div v-for="item in coreExpertise" :key="item.title"
                 class="border-b border-border pb-4 last:border-0 last:pb-0">
                 <p class="mb-1 text-sm font-semibold">{{ item.title }}</p>
                 <p class="text-xs text-muted-foreground">{{ item.desc }}</p>
@@ -57,7 +57,7 @@
           </h2>
 
           <div class="space-y-8">
-            <div v-for="experience in EXPERIENCE_TIMELINE" :key="experience.year" class="flex gap-6">
+            <div v-for="experience in timeline" :key="experience.year" class="flex gap-6">
               <div class="w-32 shrink-0">
                 <p class="text-sm font-semibold text-primary">
                   {{ experience.year }}
@@ -80,7 +80,7 @@
           </h2>
 
           <div class="grid gap-6 md:grid-cols-3">
-            <div v-for="value in CORE_VALUES" :key="value.title" class="text-center">
+            <div v-for="value in coreValues" :key="value.title" class="text-center">
               <p class="mb-3 text-4xl">{{ value.icon }}</p>
               <p class="mb-2 font-semibold">{{ value.title }}</p>
               <p class="text-sm text-muted-foreground">{{ value.desc }}</p>
@@ -105,7 +105,9 @@
 </template>
 
 <script setup lang="ts">
-import { CORE_EXPERTISE, EXPERIENCE_TIMELINE, CORE_VALUES } from '~/constants/experience'
+const { coreExpertise, timeline, coreValues } = useContent()
+
+
 const { t } = useI18n()
 const localePath = useLocalePath()
 
