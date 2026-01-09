@@ -53,5 +53,38 @@ export function useContent<T>() {
     ),
 
     socialLinks: computed(() => CONTENT.socialLinks),
+
+    categories: computed(() =>
+      CONTENT.categories.map((category) => ({
+        id: category.id,
+        label: ct(category.label, lang.value),
+      }))
+    ),
+
+    projects: computed(() => {
+      const categoryLabels = new Map(
+        CONTENT.categories.map((category) => [category.id, ct(category.label, lang.value)])
+      )
+
+      return CONTENT.projects.map((project) => ({
+        id: project.id,
+        title: ct(project.title, lang.value),
+        description: ct(project.description, lang.value),
+        longDescription: project.longDescription ? ct(project.longDescription, lang.value) : undefined,
+        tags: project.tags,
+        category: project.category,
+        categoryLabel: categoryLabels.get(project.category) ?? project.category,
+        image: project.image,
+        images: project.images,
+        features: project.features?.map((feature) => ct(feature, lang.value)),
+        techStack: project.techStack?.map((tech) => ({
+          name: ct(tech.name, lang.value),
+          description: ct(tech.description, lang.value),
+        })),
+        demo: project.demo,
+        github: project.github,
+        hasDetails: project.hasDetails,
+      }))
+    }),
   }
 }

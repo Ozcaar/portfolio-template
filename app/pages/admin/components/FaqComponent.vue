@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import AddButton from './AddButton.vue';
-import DownButton from './DownButton.vue';
+import ArrowButton from './ArrowButton.vue';
 import InputBase from './InputBase.vue';
 import RemoveButton from './RemoveButton.vue';
-import UpButton from './UpButton.vue';
 import type { Section } from '../../../types/types';
 defineProps<{
 	addFaq: () => void;
@@ -21,7 +20,7 @@ const section = defineModel<Section>('section', { required: true })
 	<section v-if="section === 'faqItems'" class="space-y-6 m-5">
 		<div class="flex items-center justify-between">
 			<h2 class="text-lg font-semibold">FAQ</h2>
-			<AddButton @click="addFaq"></AddButton>
+			<AddButton @click="addFaq" label="+ Add FAQ"></AddButton>
 		</div>
 
 		<div v-for="(item, idx) in model.faqItems" :key="idx" :class="[cardBase]">
@@ -31,11 +30,12 @@ const section = defineModel<Section>('section', { required: true })
 						{{ item.q.es || item.q.en || `FAQ #${idx + 1}` }}
 					</p>
 					<div class="flex gap-2">
-						<UpButton @click="model.faqItems = moveItem(model.faqItems, idx, idx - 1) ?? model.faqItems">
-						</UpButton>
+						<ArrowButton @click="model.faqItems = moveItem(model.faqItems, idx, idx - 1) ?? model.faqItems">
+						</ArrowButton>
 
-						<DownButton @click="model.faqItems = moveItem(model.faqItems, idx, idx + 1) ?? model.faqItems">
-						</DownButton>
+						<ArrowButton @click="model.faqItems = moveItem(model.faqItems, idx, idx + 1) ?? model.faqItems"
+							:downArrow="true">
+						</ArrowButton>
 
 						<RemoveButton @click="model.faqItems = removeAt(model.faqItems, idx)"></RemoveButton>
 					</div>

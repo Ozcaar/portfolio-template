@@ -11,6 +11,8 @@ import TimelineComponent from './components/TimelineComponent.vue'
 import CoreValuesComponent from './components/CoreValuesComponent.vue'
 import FaqComponent from './components/FaqComponent.vue'
 import SocialLinksComponent from './components/SocialLinksComponent.vue'
+import CategoriesComponent from './components/CategoriesComponent.vue'
+import ProjectsComponent from './components/ProjectsComponent.vue'
 
 const cfg = useRuntimeConfig()
 if (!cfg.public.contentEditorEnabled) {
@@ -18,6 +20,15 @@ if (!cfg.public.contentEditorEnabled) {
 }
 
 const model = ref<ContentModel>(structuredClone(CONTENT))
+
+model.value.projects = model.value.projects.map((project) => ({
+  ...project,
+  longDescription: project.longDescription ?? project.description,
+  images: project.images ?? [],
+  features: project.features ?? [],
+  techStack: project.techStack ?? [],
+  hasDetails: project.hasDetails ?? false,
+}))
 
 const section = ref<Section>('experience')
 const errors = ref<{ path: string; message: string }[]>([])
@@ -31,6 +42,8 @@ const sections = [
   { key: 'coreValues', label: 'Core Values' },
   { key: 'faqItems', label: 'FAQ' },
   { key: 'socialLinks', label: 'Social Links' },
+  { key: 'categories', label: 'Categories' },
+  { key: 'projects', label: 'Projects' },
 ]
 
 function validate() {
@@ -114,6 +127,34 @@ function addFaq() {
   model.value.faqItems = [...model.value.faqItems, { q: mkI18nText('', ''), a: mkI18nText('', '') }]
 }
 
+function addCategory() {
+  model.value.categories = [
+    ...model.value.categories,
+    { id: '', label: mkI18nText('', '') },
+  ]
+}
+
+function addProject() {
+  model.value.projects = [
+    ...model.value.projects,
+    {
+      id: model.value.projects.length + 1,
+      title: mkI18nText('', ''),
+      description: mkI18nText('', ''),
+      longDescription: mkI18nText('', ''),
+      tags: [],
+      category: model.value.categories[0]?.id ?? '',
+      image: '',
+      images: [],
+      features: [],
+      techStack: [],
+      demo: '',
+      github: '',
+      hasDetails: false,
+    },
+  ]
+}
+
 // Clipboard / Export
 async function copyJSON() {
   if (!validate()) return
@@ -130,7 +171,7 @@ function exportTS() {
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = 'content.generated.ts'
+  a.download = 'content.data.ts'
   a.click()
   URL.revokeObjectURL(url)
 }
@@ -147,7 +188,7 @@ watch(
 
 // Tailwind presets
 const pageShell =
-  'min-h-screen overflow-hidden bg-linear-to-br from-background via-background to-background font-poppins'
+  'min-h-screen overflow-hidden bg-linear-to-br from-accent/5 via-background to-secondary/10 font-poppins'
 
 const cardBase =
   'relative overflow-hidden rounded-2xl border border-border bg-card p-6 flex flex-col justify-between font-poppins'
@@ -165,7 +206,7 @@ const inputClass =
   <div :class="pageShell">
 
     <div class="max-w-6xl mx-auto p-6 space-y-4">
-      
+
       <!-- Header -->
       <div class="flex flex-wrap items-center justify-between gap-3 mt-4 mb-8">
         <div>
@@ -231,6 +272,16 @@ const inputClass =
           <!-- SOCIAL LINKS -->
           <SocialLinksComponent :cardBase="cardBase" :model="model" :labelClass="labelClass" :inputClass="inputClass"
             :getFieldError="getFieldError" v-model:section="section" />
+            
+          <!-- CATEGORIES -->
+          <CategoriesComponent :addCategory="addCategory" :model="model" :cardBase="cardBase" :moveItem="moveItem"
+            :removeAt="removeAt" :labelClass="labelClass" :inputClass="inputClass" :getFieldError="getFieldError"
+            v-model:section="section" />
+
+          <!-- PROJECTS -->
+          <ProjectsComponent :addProject="addProject" :model="model" :cardBase="cardBase" :moveItem="moveItem"
+            :removeAt="removeAt" :labelClass="labelClass" :inputClass="inputClass" :getFieldError="getFieldError"
+            v-model:section="section" />
         </main>
       </div>
     </div>

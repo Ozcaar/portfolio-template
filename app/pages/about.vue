@@ -75,7 +75,7 @@
 
         <!-- Core Values -->
         <section :class="valuesShell">
-          <h2 :class="[sectionTitle, 'mb-6']">
+          <h2 :class="[sectionTitle, 'mb-10', 'text-center']">
             {{ t('about.coreValues.title') }}
           </h2>
 

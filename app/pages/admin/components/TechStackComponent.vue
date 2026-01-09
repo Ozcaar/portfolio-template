@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import AddButton from './AddButton.vue';
-import DownButton from './DownButton.vue';
+import ArrowButton from './ArrowButton.vue';
 import InputBase from './InputBase.vue';
 import RemoveButton from './RemoveButton.vue';
-import UpButton from './UpButton.vue';
 import type { Section } from '../../../types/types';
 
 defineProps<{
@@ -23,7 +22,7 @@ const section = defineModel<Section>('section', { required: true })
 		<div class="card-body p-4 space-y-3">
 			<div class="flex items-center justify-between">
 				<h2 class="text-lg font-semibold">Tech Stack</h2>
-				<AddButton @click="addTech"></AddButton>
+				<AddButton @click="addTech" label="+ Add Tech Stack"></AddButton>
 			</div>
 
 			<div class="space-y-2">
@@ -34,9 +33,11 @@ const section = defineModel<Section>('section', { required: true })
 						model.techStack = copy
 					}" name="tech-stack-item" label="" placeholder="e.g. TypeScript" :inputClass="inputClass" class="w-full" />
 
-					<UpButton @click="model.techStack = moveItem(model.techStack, idx, idx - 1) ?? model.techStack" />
+					<ArrowButton
+						@click="model.techStack = moveItem(model.techStack, idx, idx - 1) ?? model.techStack" />
 
-					<DownButton @click="model.techStack = moveItem(model.techStack, idx, idx + 1) ?? model.techStack" />
+					<ArrowButton @click="model.techStack = moveItem(model.techStack, idx, idx + 1) ?? model.techStack"
+						:downArrow="true" />
 
 					<RemoveButton @click="model.techStack = removeAt(model.techStack, idx)" />
 				</div>

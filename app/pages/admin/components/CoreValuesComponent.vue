@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import AddButton from './AddButton.vue';
-import DownButton from './DownButton.vue';
+import ArrowButton from './ArrowButton.vue';
 import InputBase from './InputBase.vue';
 import RemoveButton from './RemoveButton.vue';
-import UpButton from './UpButton.vue';
 import type { Section } from '../../../types/types';
 
 defineProps<{
@@ -22,7 +21,7 @@ const section = defineModel<Section>('section', { required: true })
 	<section v-if="section === 'coreValues'" class="space-y-6 m-5">
 		<div class="flex items-center justify-between">
 			<h2 class="text-lg font-semibold">Core Values</h2>
-			<AddButton @click="addCoreValue"></AddButton>
+			<AddButton @click="addCoreValue" label="+ Add Core Value"></AddButton>
 		</div>
 
 		<div v-for="(item, idx) in model.coreValues" :key="idx" :class="[cardBase]">
@@ -30,13 +29,14 @@ const section = defineModel<Section>('section', { required: true })
 				<div class="flex items-center justify-between">
 					<p class="font-semibold">{{ item.title.es || item.title.en || `Value #${idx + 1}` }}</p>
 					<div class="flex gap-2">
-						<UpButton
+						<ArrowButton
 							@click="model.coreValues = moveItem(model.coreValues, idx, idx - 1) ?? model.coreValues">
-						</UpButton>
+						</ArrowButton>
 
-						<DownButton
-							@click="model.coreValues = moveItem(model.coreValues, idx, idx + 1) ?? model.coreValues">
-						</DownButton>
+						<ArrowButton
+							@click="model.coreValues = moveItem(model.coreValues, idx, idx + 1) ?? model.coreValues"
+							:downArrow="true">
+						</ArrowButton>
 
 						<RemoveButton @click="model.coreValues = removeAt(model.coreValues, idx)"></RemoveButton>
 					</div>

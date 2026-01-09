@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import AddButton from './AddButton.vue';
-import DownButton from './DownButton.vue';
+import ArrowButton from './ArrowButton.vue';
 import InputBase from './InputBase.vue';
 import RemoveButton from './RemoveButton.vue';
-import UpButton from './UpButton.vue';
 import type { Section } from '../../../types/types';
 
 defineProps<{
@@ -22,7 +21,7 @@ const section = defineModel<Section>('section', { required: true })
 	<section v-if="section === 'experienceTimeline'" class="space-y-6 m-5">
 		<div class="flex items-center justify-between">
 			<h2 class="text-lg font-semibold">Experience Timeline</h2>
-			<AddButton @click="addTimeline"></AddButton>
+			<AddButton @click="addTimeline" label="+ Add Timeline"></AddButton>
 		</div>
 
 		<div v-for="(item, idx) in model.experienceTimeline" :key="idx" :class="[cardBase]">
@@ -30,13 +29,14 @@ const section = defineModel<Section>('section', { required: true })
 				<div class="flex items-center justify-between">
 					<p class="font-semibold">{{ item.year.es || item.year.en || `Timeline #${idx + 1}` }}</p>
 					<div class="flex gap-2">
-						<UpButton
+						<ArrowButton
 							@click="model.experienceTimeline = moveItem(model.experienceTimeline, idx, idx - 1) ?? model.experienceTimeline">
-						</UpButton>
+						</ArrowButton>
 
-						<DownButton
-							@click="model.experienceTimeline = moveItem(model.experienceTimeline, idx, idx + 1) ?? model.experienceTimeline">
-						</DownButton>
+						<ArrowButton
+							@click="model.experienceTimeline = moveItem(model.experienceTimeline, idx, idx + 1) ?? model.experienceTimeline"
+							:downArrow="true">
+						</ArrowButton>
 
 						<RemoveButton @click="model.experienceTimeline = removeAt(model.experienceTimeline, idx)">
 						</RemoveButton>

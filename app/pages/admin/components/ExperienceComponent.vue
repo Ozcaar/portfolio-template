@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import AddButton from './AddButton.vue';
-import DownButton from './DownButton.vue';
+import ArrowButton from './ArrowButton.vue';
 import InputBase from './InputBase.vue';
 import RemoveButton from './RemoveButton.vue';
-import UpButton from './UpButton.vue';
 import type { Section } from '../../../types/types';
 
 defineProps<{
@@ -23,7 +22,7 @@ const section = defineModel<Section>('section', { required: true })
 	<section v-if="section === 'experience'" class="space-y-6 m-5">
 		<div class="flex items-center justify-between">
 			<h2 class="text-lg font-semibold">Experience</h2>
-			<AddButton @click="addExperience"></AddButton>
+			<AddButton @click="addExperience" label="+ Add Experience"></AddButton>
 		</div>
 
 		<div v-for="(item, idx) in model.experience" :key="idx" :class="[cardBase]">
@@ -33,13 +32,14 @@ const section = defineModel<Section>('section', { required: true })
 						{{ item.company || `Experiencia #${idx + 1}` }}
 					</p>
 					<div class="flex gap-2">
-						<UpButton
+						<ArrowButton
 							@click="model.experience = moveItem(model.experience, idx, idx - 1) ?? model.experience">
-						</UpButton>
+						</ArrowButton>
 
-						<DownButton
-							@click="model.experience = moveItem(model.experience, idx, idx + 1) ?? model.experience">
-						</DownButton>
+						<ArrowButton
+							@click="model.experience = moveItem(model.experience, idx, idx + 1) ?? model.experience"
+							:downArrow="true">
+						</ArrowButton>
 
 						<RemoveButton @click="model.experience = removeAt(model.experience, idx)"></RemoveButton>
 					</div>
