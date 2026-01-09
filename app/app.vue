@@ -17,9 +17,9 @@ const canonical = computed(() => config.public.siteUrl + route.fullPath)
 const { t } = useI18n()
 
 useSeoMeta({
-  title: () => t('seo.home.title'),
+  title: () => t('seo.home.title', { name: config.public.name }),
   description: () => t('seo.home.description'),
-  ogTitle: () => t('seo.home.title'),
+  ogTitle: () => t('seo.home.title', { name: config.public.name }),
   ogDescription: () => t('seo.home.description'),
 })
 

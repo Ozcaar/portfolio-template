@@ -2,7 +2,7 @@
   <nav :class="navShell">
     <div :class="container">
       <NuxtLink :to="{ path: localePath('/') }" :class="brandLink">
-        Oscar López
+        {{ cfg.public.name }}
       </NuxtLink>
 
       <NuxtLink :to="{ path: localePath('/') }" :aria-label="t('common.nav.backToHome')" :class="backLink">
@@ -16,6 +16,8 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
+const cfg = useRuntimeConfig()
+
 
 // Tailwind presets
 const navShell =

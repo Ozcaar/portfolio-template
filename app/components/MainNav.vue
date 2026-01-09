@@ -3,7 +3,9 @@
 
     <!-- Desktop -->
     <div :class="[container, 'hidden md:flex items-center justify-between py-4']">
-      <span :class="logoClass">ÓL</span>
+      <NuxtLink :to="{ path: localePath('/') }" :class="brandLink">
+        {{ cfg.public.name }}
+      </NuxtLink>
 
       <div class="flex items-center gap-8">
         <NuxtLink v-for="item in navItems" :key="item.key" :to="item.to" :aria-label="t(item.labelKey)"
@@ -44,10 +46,9 @@
         </div>
       </div>
 
-      <!-- Logo -->
-      <div class="navbar-center">
-        <span :class="logoClass">ÓL</span>
-      </div>
+      <NuxtLink :to="{ path: localePath('/') }" :class="brandLink" class="navbar-center text-center">
+        {{ cfg.public.name }}
+      </NuxtLink>
 
       <!-- Hidden (balance) -->
       <div class="navbar-end invisible">
@@ -65,6 +66,7 @@
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
+const cfg = useRuntimeConfig()
 
 // Tailwind presets
 const navShell =
@@ -73,6 +75,9 @@ const navShell =
 const container = 'mx-auto max-w-7xl px-6'
 
 const logoClass = 'text-2xl font-bold font-poppins text-gradient'
+
+const brandLink =
+  'text-2xl font-bold font-poppins text-foreground transition-smooth hover:text-primary'
 
 const navLink = 'text-sm font-medium transition-smooth hover:text-primary'
 
