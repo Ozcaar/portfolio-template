@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import AddButton from './AddButton.vue';
-import DownButton from './DownButton.vue';
+import ArrowButton from './ArrowButton.vue';
 import InputBase from './InputBase.vue';
 import RemoveButton from './RemoveButton.vue';
-import UpButton from './UpButton.vue';
 import type { Section } from '../../../types/types';
 
 defineProps<{
@@ -22,7 +21,7 @@ const section = defineModel<Section>('section', { required: true })
 	<section v-if="section === 'coreExpertise'" class="space-y-6 m-5">
 		<div class="flex items-center justify-between">
 			<h2 class="text-lg font-semibold">Core Expertise</h2>
-			<AddButton @click="addCoreExpertise">
+			<AddButton @click="addCoreExpertise" label="+ Add Core Expertise">
 			</AddButton>
 		</div>
 
@@ -32,13 +31,14 @@ const section = defineModel<Section>('section', { required: true })
 					<p class="font-semibold">{{ item.title.es || item.title.en || `Item #${idx + 1}` }}</p>
 					<div class="flex gap-2">
 
-						<UpButton
+						<ArrowButton
 							@click="model.coreExpertise = moveItem(model.coreExpertise, idx, idx - 1) ?? model.coreExpertise">
-						</UpButton>
+						</ArrowButton>
 
-						<DownButton
-							@click="model.coreExpertise = moveItem(model.coreExpertise, idx, idx + 1) ?? model.coreExpertise">
-						</DownButton>
+						<ArrowButton
+							@click="model.coreExpertise = moveItem(model.coreExpertise, idx, idx + 1) ?? model.coreExpertise"
+							:downArrow="true">
+						</ArrowButton>
 
 						<RemoveButton @click="model.coreExpertise = removeAt(model.coreExpertise, idx)"></RemoveButton>
 					</div>

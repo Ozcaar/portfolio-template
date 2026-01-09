@@ -19,16 +19,16 @@
 
       <!-- Category pills -->
       <div class="mb-12 flex gap-2 overflow-x-auto pb-2">
-        <button v-for="category in CATEGORIES" :key="category" @click="selectedCategory = category"
+        <button v-for="category in categories" :key="category.id" @click="selectedCategory = category.id"
           :class="[pillBase, isActiveCategory(category) ? pillActive : pillIdle]">
-          {{ category }}
+          {{ category.label }}
         </button>
       </div>
 
       <!-- Projects Grid -->
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <article v-for="project in filteredProjects" :key="project.id" :class="projectCard">
-          
+
           <!-- Project Image -->
           <div class="relative h-48 overflow-hidden bg-muted">
             <NuxtImg :src="project.image || '/placeholder.svg'" :alt="project.title" width="384" height="192"
@@ -82,14 +82,25 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { PROJECTS, CATEGORIES } from '~/constants/projects'
+import { computed, ref, watch } from 'vue'
 import type { Project } from '~/types/project'
 
 const { t } = useI18n()
+const { projects, categories } = useContent()
 
-const selectedCategory = ref('All')
+const selectedCategory = ref('')
 const selectedProject = ref<Project | null>(null)
+const allCategoryId = computed(
+  () => categories.value.find((category) => category.id === 'all')?.id ?? categories.value[0]?.id ?? 'all'
+)
+
+watch(
+  allCategoryId,
+  (value) => {
+    if (!selectedCategory.value) selectedCategory.value = value
+  },
+  { immediate: true }
+)
 
 // Presets
 const sectionShell =
@@ -131,11 +142,11 @@ const btnFill = 'flex-1 px-4 py-2'
 const btnIcon = 'px-3 py-2 cursor-pointer'
 
 // Helpers
-const isActiveCategory = (category: string) => selectedCategory.value === category
+const isActiveCategory = (category: { id: string }) => selectedCategory.value === category.id
 
 const filteredProjects = computed(() =>
-  selectedCategory.value === 'All'
-    ? PROJECTS
-    : PROJECTS.filter((p) => p.category === selectedCategory.value)
+  selectedCategory.value === allCategoryId.value
+    ? projects.value
+    : projects.value.filter((p) => p.category === selectedCategory.value)
 )
 </script>

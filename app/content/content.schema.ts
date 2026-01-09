@@ -37,6 +37,32 @@ export type SocialLinks = {
     email: string
 }
 
+export type CategoryItem = {
+    id: string
+    label: I18nText
+}
+
+export type ProjectTechItem = {
+    name: I18nText
+    description: I18nText
+}
+
+export type ProjectItem = {
+    id: number
+    title: I18nText
+    description: I18nText
+    longDescription?: I18nText
+    tags: string[]
+    category: string
+    image: string
+    images?: string[]
+    features?: I18nText[]
+    techStack?: ProjectTechItem[]
+    demo: string
+    github: string
+    hasDetails: boolean
+}
+
 export type ContentModel = {
     techStack: string[]
     experience: ExperienceItem[]
@@ -45,4 +71,6 @@ export type ContentModel = {
     coreValues: CoreValueItem[]
     faqItems: FaqItem[]
     socialLinks: SocialLinks
+    categories: CategoryItem[]
+    projects: ProjectItem[]
 }

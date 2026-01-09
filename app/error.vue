@@ -91,4 +91,5 @@ const description = computed(() =>
         ? errorsList[currentLocale.value]["404Desc"]
         : errorsList[currentLocale.value]["400Desc"]
 )
+
 </script>

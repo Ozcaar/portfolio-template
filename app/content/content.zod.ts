@@ -51,6 +51,32 @@ export const SocialLinksSchema = z.object({
     email,
 })
 
+export const CategoryItemSchema = z.object({
+    id: nonEmpty('Category ID'),
+    label: i18nText,
+})
+
+export const ProjectTechItemSchema = z.object({
+    name: i18nText,
+    description: i18nText,
+})
+
+export const ProjectItemSchema = z.object({
+    id: z.number().int().min(1, 'Project ID'),
+    title: i18nText,
+    description: i18nText,
+    longDescription: i18nText.optional(),
+    tags: z.array(nonEmpty('Tag')),
+    category: nonEmpty('Category'),
+    image: nonEmpty('Image'),
+    images: z.array(nonEmpty('Image')).optional(),
+    features: z.array(i18nText).optional(),
+    techStack: z.array(ProjectTechItemSchema).optional(),
+    demo: url('Demo URL'),
+    github: url('GitHub URL'),
+    hasDetails: z.boolean(),
+})
+
 export const ContentModelSchema = z.object({
     techStack: z.array(nonEmpty('Tech stack item')).min(1, 'Tech stack empty'),
     experience: z.array(ExperienceItemSchema),
@@ -59,6 +85,8 @@ export const ContentModelSchema = z.object({
     coreValues: z.array(CoreValueItemSchema),
     faqItems: z.array(FaqItemSchema),
     socialLinks: SocialLinksSchema,
+    categories: z.array(CategoryItemSchema),
+    projects: z.array(ProjectItemSchema),
 })
 
 // Types inferred from schemas

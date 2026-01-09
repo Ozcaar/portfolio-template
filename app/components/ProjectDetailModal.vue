@@ -12,7 +12,7 @@
         <!-- Header -->
         <header class="mb-8">
           <span :class="chip">
-            {{ project.category }}
+            {{ project.categoryLabel ?? project.category }}
           </span>
 
           <h2 class="mb-4 text-4xl font-bold">

@@ -6,3 +6,5 @@ export type Section =
   | 'coreValues'
   | 'faqItems'
   | 'socialLinks'
+  | 'categories'
+  | 'projects'

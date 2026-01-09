@@ -26,8 +26,8 @@ function onInput(e: Event) {
 </script>
 
 <template>
-  <div class="space-y-1">
-    <label :for="name" :class="labelClass" class="block">
+  <div>
+    <label :for="name" :class="label ? labelClass : ''" class="block">
       {{ label }}
       <span v-if="required" class="text-error">*</span>
     </label>

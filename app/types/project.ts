@@ -5,10 +5,12 @@ export interface Project {
     longDescription?: string
     tags: string[]
     category: string
+    categoryLabel?: string
     image: string
     images?: string[]
     features?: string[]
     techStack?: { name: string; description: string }[]
     demo: string
     github: string
+    hasDetails?: boolean
 }

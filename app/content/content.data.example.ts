@@ -64,7 +64,7 @@ export const CONTENT: ContentModel = {
                 es: "Apoyo en el desarrollo de herramientas internas y automatización de procesos administrativos mediante scripts y aplicaciones web.",
                 en: "Assisted in the development of internal tools and automation of administrative processes using scripts and web applications."
             }
-        }
+        },
     ],
 
     coreExpertise: [
@@ -199,5 +199,90 @@ export const CONTENT: ContentModel = {
         github: "https://github.com/username",
         linkedin: "https://www.linkedin.com/in/username/",
         email: "contact@example.com"
-    }
+    },
+
+    categories: [
+        { id: "all", label: { es: "Todos", en: "All" } },
+        { id: "frontend", label: { es: "Frontend", en: "Frontend" } },
+        { id: "backend", label: { es: "Backend", en: "Backend" } },
+        { id: "full-stack", label: { es: "Full-Stack", en: "Full-Stack" } }
+    ],
+
+    projects: [
+        {
+            id: 1,
+            title: { es: "Plataforma de Microservicios", en: "MicroServices Platform" },
+            description: {
+                es: "Arquitectura de microservicios empresarial con patrones orientados a eventos y trazabilidad distribuida.",
+                en: "Enterprise-grade microservices architecture with event-driven design patterns and distributed tracing."
+            },
+            longDescription: {
+                es: "Plataforma de microservicios empresarial construida con principios de Domain-Driven Design (DDD) y arquitectura orientada a eventos. Incluye monitoreo distribuido, service mesh con Istio, y gestión centralizada de configuración.",
+                en: "Enterprise microservices platform built with Domain-Driven Design (DDD) and event-driven architecture. Includes distributed monitoring, an Istio service mesh, and centralized configuration management."
+            },
+            tags: ["DDD", "Microservices", "Node.js", "Docker"],
+            category: "backend",
+            image: "/microservices-architecture-dashboard.jpg",
+            images: ["/microservices-dashboard-metrics.jpg", "/distributed-tracing-visualization.png"],
+            features: [
+                { es: "Arquitectura basada en eventos con Kafka", en: "Event-driven architecture with Kafka" },
+                { es: "Service discovery con Consul", en: "Service discovery with Consul" },
+                { es: "API Gateway centralizado con autenticación JWT", en: "Centralized API Gateway with JWT auth" },
+                { es: "Monitoreo y trazabilidad distribuida con Jaeger", en: "Distributed monitoring and tracing with Jaeger" },
+                { es: "Circuit breaker y retry patterns", en: "Circuit breaker and retry patterns" },
+                { es: "Despliegue automatizado con CI/CD", en: "Automated deployments with CI/CD" }
+            ],
+            techStack: [
+                {
+                    name: { es: "Node.js + Express", en: "Node.js + Express" },
+                    description: {
+                        es: "Backend de microservicios con Express y TypeScript",
+                        en: "Microservices backend with Express and TypeScript"
+                    }
+                },
+                {
+                    name: { es: "Kafka", en: "Kafka" },
+                    description: {
+                        es: "Message broker para comunicación asíncrona",
+                        en: "Message broker for async communication"
+                    }
+                },
+                {
+                    name: { es: "Docker + Kubernetes", en: "Docker + Kubernetes" },
+                    description: {
+                        es: "Containerización y orquestación",
+                        en: "Containerization and orchestration"
+                    }
+                },
+                {
+                    name: { es: "PostgreSQL + Redis", en: "PostgreSQL + Redis" },
+                    description: {
+                        es: "Bases de datos relacionales y caching",
+                        en: "Relational databases and caching"
+                    }
+                }
+            ],
+            demo: "https://example.com",
+            github: "https://github.com",
+            hasDetails: true
+        },
+        {
+            id: 2,
+            title: { es: "Plataforma E-commerce", en: "E-commerce Platform" },
+            description: {
+                es: "Solución e-commerce full-stack con pagos, inventario y panel de administración.",
+                en: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard."
+            },
+            longDescription: {
+                es: "Solución e-commerce full-stack con pagos, inventario y panel de administración.",
+                en: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard."
+            },
+            tags: ["Full-Stack", "Next.js", "Stripe", "PostgreSQL"],
+            category: "full-stack",
+            image: "/ecommerce-product-page.jpg",
+            demo: "https://example.com",
+            github: "https://github.com",
+            hasDetails: false
+        },
+    ]
 }
