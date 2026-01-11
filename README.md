@@ -1,7 +1,7 @@
 # 💼 Portfolio Template
 
-> [🇺🇸 Professional portfolio built with Nuxt](/#English)  
-> [🇪🇸 Portfolio profesional desarrollado con Nuxt](/#Español)
+> [🇺🇸 English](/#English)  
+> [🇲🇽 Español](/#Español)
 
 Professional portfolio built with **Nuxt** and easily customizable.
 
