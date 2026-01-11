@@ -6,6 +6,9 @@
 .cache
 dist
 
+# Wrangler outputs
+.wrangler
+
 # Node dependencies
 node_modules
 
