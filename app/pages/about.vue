@@ -57,8 +57,8 @@
           </h2>
 
           <div class="space-y-8">
-            <div v-for="experience in timeline" :key="experience.year" class="flex gap-6">
-              <div class="w-32 shrink-0">
+            <div v-for="experience in timeline" :key="experience.year" class="flex gap-2 md:gap-6">
+              <div class="w-32 shrink-0 flex justify-center items-center">
                 <p class="text-sm font-semibold text-primary">
                   {{ experience.year }}
                 </p>

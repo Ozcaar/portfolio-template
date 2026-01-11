@@ -1,6 +1,4 @@
-import { join } from "node:path"
-import { randomUUID, createHash } from 'node:crypto'
-import * as Sentry from "@sentry/node"
+import * as Sentry from "@sentry/nuxt"
 
 const config = useRuntimeConfig()
 
@@ -58,10 +56,12 @@ function normalizeString(v: unknown) {
   return v.trim().replace(/\s+/g, " ")
 }
 
-function hashEmail(email: string): string {
-  return createHash("sha256")
-    .update(email.trim().toLowerCase())
-    .digest("hex");
+async function hashEmail(email: string): Promise<string> {
+  return crypto.subtle.digest("SHA-256", new TextEncoder().encode(email.trim().toLowerCase()))
+    .then((hashBuffer) => {
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    });
 }
 
 function getTranslation(lang: Language = 'en', key: TranslationKeys, field: string): string {
@@ -122,7 +122,7 @@ export default defineEventHandler(async (event) => {
   const endpoint = config.formspreeEndpoint as string;
 
   try {
-    // throw new Error("Simulated error for testing.");
+    throw new Error("Simulated error for testing.");
     await $fetch(endpoint, {
       method: "POST",
       headers: {
@@ -138,7 +138,7 @@ export default defineEventHandler(async (event) => {
 
     return { ok: true }
   } catch (err: any) {
-    const errorId = randomUUID()
+    const errorId = crypto.randomUUID()
 
     const status = err?.response?.status ?? err?.status ?? 0
     const statusText = err?.response?.statusText ?? err?.statusText
@@ -155,7 +155,7 @@ export default defineEventHandler(async (event) => {
         getRequestHeader(event, "x-forwarded-for") ??
         getRequestHeader(event, "x-real-ip"),
       ua: getRequestHeader(event, "user-agent"),
-      email: hashEmail(result.value.email),
+      email: await hashEmail(result.value.email),
     },
       err
     );

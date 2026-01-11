@@ -63,13 +63,14 @@ const EXCLUDED_LANGUAGES = new Set([
   "HTML",
 ])
 
-async function ghFetch<T>(url: string, token?: string): Promise<T> {
+async function ghFetch<T>(url: string, username?: string, token?: string): Promise<T> {
   try {
     return await $fetch<T>(url, {
       headers: {
         Accept: "application/vnd.github+json",
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
         "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": username || "portfolio-app",
       },
     })
   } catch (e: any) {
@@ -190,7 +191,7 @@ export default defineEventHandler(async (event) => {
 
     let user: GhUser = {} as GhUser
     try {
-      user = await ghFetch<GhUser>(`${GH_API}/user`, token)
+      user = await ghFetch<GhUser>(`${GH_API}/user`, username, token)
     } catch (e) {
       throwUpstream("user", e)
     }
@@ -206,6 +207,7 @@ export default defineEventHandler(async (event) => {
         Array.from({ length: pages }, (_, i) =>
           ghFetch<GhRepo[]>(
             `${GH_API}/user/repos?per_page=${perPage}&page=${i + 1}&sort=updated`,
+            username,
             token
           )
         )
@@ -244,7 +246,7 @@ export default defineEventHandler(async (event) => {
     const results = await Promise.allSettled(
       langReposPick.map((repo) =>
         limit(async () => {
-          const langs = await ghFetch<GhLangs>(repo.languages_url, token)
+          const langs = await ghFetch<GhLangs>(repo.languages_url, username, token)
           return { repo: repo.full_name, langs }
         })
       )
@@ -280,6 +282,7 @@ export default defineEventHandler(async (event) => {
     try {
       events = await ghFetch<GhEvent[]>(
         `${GH_API}/users/${username}/events?per_page=100`,
+        username,
         token
       )
     } catch (e) {
