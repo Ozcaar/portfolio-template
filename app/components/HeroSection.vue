@@ -36,9 +36,9 @@
         <!-- Tech Stack -->
         <div :class="[cardBase, cardHover]">
           <div>
-            <h3 :class="cardTitle">
+            <h2 :class="cardTitle">
               {{ t('home.hero.techStack.title') }}
-            </h3>
+            </h2>
 
             <div class="flex flex-wrap gap-2">
               <span v-for="tech in techStack" :key="tech" :class="techChip">
