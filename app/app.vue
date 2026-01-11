@@ -14,7 +14,7 @@
 const route = useRoute()
 const config = useRuntimeConfig()
 const canonical = computed(() => config.public.siteUrl + route.fullPath)
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 useSeoMeta({
   title: () => t('seo.home.title', { name: config.public.name }),
@@ -24,6 +24,9 @@ useSeoMeta({
 })
 
 useHead({
+  htmlAttrs: {
+    lang: locale,
+  },
   link: [{ rel: 'canonical', href: canonical.value }],
 })
 </script>
