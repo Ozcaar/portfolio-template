@@ -206,6 +206,7 @@
 <script setup lang="ts">
 import type { SocialItem } from '~/types/SocialItem'
 import type { SocialLinks as SocialLinksType } from '~/content/content.schema'
+import * as Sentry from "@sentry/nuxt";
 
 const { faq, socialLinks: socialLinksContent } = useContent<{ socialLinks: SocialLinksType }>()
 
@@ -280,6 +281,7 @@ async function copyEmail() {
     timeout = window.setTimeout(() => (copied.value = false), 2000)
   } catch (err) {
     console.error(locale.value === 'en' ? 'Cannot copy the email' : 'No se pudo copiar el correo', err)
+    throw new Error("Cannot copy the email")
   }
 }
 
@@ -303,6 +305,7 @@ async function handleSubmit() {
       errCode: err?.statusCode ?? 500,
       trackId: err?.data?.data?.trackId,
     }
+    throw new Error("Cannot submit the contact form.", { cause: err });
   } finally {
     isSubmitting.value = false
   }

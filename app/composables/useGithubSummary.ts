@@ -1,3 +1,5 @@
+import * as Sentry from "@sentry/nuxt";
+
 export type GithubSummary = {
   user: {
     login: string
@@ -43,8 +45,12 @@ export type GithubSummary = {
 }
 
 export const useGithubSummary = () => {
-  return useFetch<GithubSummary>("/api/github/summary", {
-    server: true,
-    retry: 0,
-  })
+  try {
+    return useFetch<GithubSummary>("/api/github/summary", {
+      server: true,
+      retry: 0,
+    })
+  } catch (e: any) {
+    throw new Error("Failed to use Github summary.", { cause: e });
+  }
 }
