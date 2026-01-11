@@ -140,14 +140,6 @@ Done 🚀 Your portfolio will be live.
 
 # Español
 
-# 💼 Plantilla para portfolio
-
-Portfolio profesional desarrollado con **Nuxt** y fácilmente personalizable.  
-
-🔗 **Demo:** [ozcaar.dev](https://www.ozcaar.dev/)
-
----
-
 ## ✨ Características
 
 - ⚡ **Nuxt (SSR / SSG ready)**
