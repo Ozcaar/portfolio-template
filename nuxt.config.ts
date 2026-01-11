@@ -3,12 +3,15 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   runtimeConfig: {
-    sentryDsn: process.env.SENTRY_DSN,
     formspreeEndpoint: process.env.FORMSPREE_ENDPOINT,
     public: {
       name: process.env.NAME || 'Your Name',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
       contentEditorEnabled: process.env.NUXT_PUBLIC_CONTENT_EDITOR_ENABLED === 'true',
+      sentry: {
+        dsn: process.env.SENTRY_DSN,
+      },
+
     }
   },
 
@@ -53,6 +56,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    '@sentry/nuxt/module',
   ],
 
   fonts: {
