@@ -122,7 +122,7 @@ export default defineEventHandler(async (event) => {
   const endpoint = config.formspreeEndpoint as string;
 
   try {
-    throw new Error("Simulated error for testing.");
+    // throw new Error("Simulated error for testing.");
     await $fetch(endpoint, {
       method: "POST",
       headers: {
