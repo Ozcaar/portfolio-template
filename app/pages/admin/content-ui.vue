@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import { CONTENT } from '~/content/content.data'
+
 import type { ContentModel, I18nText } from '~/content/content.schema'
+import type { Section } from '~/types/types'
+
+import { CONTENT } from '~/content/content.data'
 import { ContentModelSchema, formatZodErrors } from '~/content/content.zod'
-import SectionNav from './components/SectionNav.vue'
-import TechStackComponent from './components/TechStackComponent.vue'
-import type { Section } from '../../types/types'
-import ExperienceComponent from './components/ExperienceComponent.vue'
-import CoreExpertiseComponent from './components/CoreExpertiseComponent.vue'
-import TimelineComponent from './components/TimelineComponent.vue'
-import CoreValuesComponent from './components/CoreValuesComponent.vue'
-import FaqComponent from './components/FaqComponent.vue'
-import SocialLinksComponent from './components/SocialLinksComponent.vue'
-import CategoriesComponent from './components/CategoriesComponent.vue'
-import ProjectsComponent from './components/ProjectsComponent.vue'
+
+import SectionNav from '~/components/admin/components/SectionNav.vue'
+import TechStackComponent from '~/components/admin/components/TechStackComponent.vue'
+import ExperienceComponent from '~/components/admin/components/ExperienceComponent.vue'
+import CoreExpertiseComponent from '~/components/admin/components/CoreExpertiseComponent.vue'
+import TimelineComponent from '~/components/admin/components/TimelineComponent.vue'
+import CoreValuesComponent from '~/components/admin/components/CoreValuesComponent.vue'
+import FaqComponent from '~/components/admin/components/FaqComponent.vue'
+import SocialLinksComponent from '~/components/admin/components/SocialLinksComponent.vue'
+import CategoriesComponent from '~/components/admin/components/CategoriesComponent.vue'
+import ProjectsComponent from '~/components/admin/components/ProjectsComponent.vue'
 
 const cfg = useRuntimeConfig()
 if (!cfg.public.contentEditorEnabled) {
@@ -272,7 +275,7 @@ const inputClass =
           <!-- SOCIAL LINKS -->
           <SocialLinksComponent :cardBase="cardBase" :model="model" :labelClass="labelClass" :inputClass="inputClass"
             :getFieldError="getFieldError" v-model:section="section" />
-            
+
           <!-- CATEGORIES -->
           <CategoriesComponent :addCategory="addCategory" :model="model" :cardBase="cardBase" :moveItem="moveItem"
             :removeAt="removeAt" :labelClass="labelClass" :inputClass="inputClass" :getFieldError="getFieldError"
