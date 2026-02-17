@@ -10,7 +10,7 @@
           </div>
 
           <div class="relative z-10">
-            <p class="mb-2 text-sm font-medium text-primary">
+            <p class="mb-2 text-md font-medium text-primary">
               {{ t('home.hero.intro.role') }}
             </p>
 
