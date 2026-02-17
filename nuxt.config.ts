@@ -29,9 +29,47 @@ export default defineNuxtConfig({
   },
 
   robots: {
-    rules: [{ userAgent: '*', allow: '/' }],
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/admin',
+          '/admin/**',
+          '/api',
+          '/api/**',
+          '/_nuxt',
+        ]
+      }
+    ],
     sitemap: `${process.env.NUXT_PUBLIC_SITE_URL}/sitemap.xml`,
   },
+
+  sitemap: {
+    siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+    gzip: true,
+    autoLastmod: true,
+    urls: async () => {
+      return [
+        {
+          loc: '/',
+          priority: 1.0,
+          changefreq: 'weekly'
+        },
+        {
+          loc: '/about',
+          priority: 0.9,
+          changefreq: 'weekly'
+        },
+        {
+          loc: '/contact',
+          priority: 0.8,
+          changefreq: 'monthly'
+        }
+      ]
+    }
+  }
+  ,
 
   routeRules: {
     // '/': { redirect: '/x' },
