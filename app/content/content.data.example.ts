@@ -1,288 +1,232 @@
 import type { ContentModel } from './content.schema'
 
 export const CONTENT: ContentModel = {
-    techStack: [
-        "Java",
-        "Spring Boot",
-        "TypeScript",
-        "JavaScript",
-        "Nuxt",
-        "Vue.js",
-        "React",
-        "Node.js",
-        "ASP.NET",
-        "C#",
-        "Tailwind CSS",
-        "Python",
-        "Docker",
-        "PostgreSQL",
-        "Git"
-    ],
+  techStack: [
+    "TypeScript",
+    "JavaScript",
+    "Nuxt",
+    "Vue.js",
+    "React",
+    "Node.js",
+    "Java",
+    "Spring Boot",
+    ".NET",
+    "C#",
+    "PostgreSQL",
+    "Docker",
+    "Git",
+    "Tailwind"
+  ],
 
-    experience: [
-        {
-            company: "Tech Solutions Company",
-            role: {
-                es: "Desarrollador Full Stack",
-                en: "Full Stack Developer"
-            },
-            duration: {
-                es: "Ene 2023 - Actualidad",
-                en: "Jan 2023 - Present"
-            },
-            description: {
-                es: "Desarrollo y mantenimiento de aplicaciones web modernas, participando en todo el ciclo de vida del software. Trabajo con equipos multidisciplinarios aplicando buenas prácticas de desarrollo, testing y metodologías ágiles.",
-                en: "Development and maintenance of modern web applications, participating across the full software lifecycle. I work with cross-functional teams applying best development practices, testing, and agile methodologies."
-            }
-        },
-        {
-            company: "Digital Services Studio",
-            role: {
-                es: "Ingeniero de Software",
-                en: "Software Engineer"
-            },
-            duration: {
-                es: "Mar 2021 - Dic 2022",
-                en: "Mar 2021 - Dec 2022"
-            },
-            description: {
-                es: "Construcción de APIs REST y aplicaciones frontend enfocadas en rendimiento, seguridad y escalabilidad. Colaboré en la mejora continua de la arquitectura del sistema.",
-                en: "Built REST APIs and frontend applications focused on performance, security, and scalability. Collaborated on continuous improvements to system architecture."
-            }
-        },
-        {
-            company: "Educational Institution",
-            role: {
-                es: "Desarrollador Junior",
-                en: "Junior Developer"
-            },
-            duration: {
-                es: "Ago 2019 - Feb 2021",
-                en: "Aug 2019 - Feb 2021"
-            },
-            description: {
-                es: "Apoyo en el desarrollo de herramientas internas y automatización de procesos administrativos mediante scripts y aplicaciones web.",
-                en: "Assisted in the development of internal tools and automation of administrative processes using scripts and web applications."
-            }
-        },
-    ],
-
-    coreExpertise: [
-        {
-            title: { es: "Frontend Engineering", en: "Frontend Engineering" },
-            desc: {
-                es: "Vue.js, Nuxt.js, React, TypeScript, Tailwind CSS",
-                en: "Vue.js, Nuxt.js, React, TypeScript, Tailwind CSS"
-            }
-        },
-        {
-            title: { es: "Backend Development", en: "Backend Development" },
-            desc: {
-                es: "Node.js, Spring Boot, ASP.NET Core, REST APIs",
-                en: "Node.js, Spring Boot, ASP.NET Core, REST APIs"
-            }
-        },
-        {
-            title: { es: "Arquitectura de Software", en: "Software Architecture" },
-            desc: {
-                es: "Clean Architecture, DDD, Microservicios",
-                en: "Clean Architecture, DDD, Microservices"
-            }
-        },
-        {
-            title: { es: "Bases de Datos", en: "Databases" },
-            desc: {
-                es: "PostgreSQL, MySQL, SQL Server",
-                en: "PostgreSQL, MySQL, SQL Server"
-            }
-        },
-        {
-            title: { es: "DevOps", en: "DevOps" },
-            desc: {
-                es: "Docker, CI/CD, Cloud Deployments",
-                en: "Docker, CI/CD, Cloud Deployments"
-            }
-        }
-    ],
-
-    experienceTimeline: [
-        {
-            year: { es: "2023 - Actualidad", en: "2023 - Present" },
-            role: { es: "Senior Full Stack Developer", en: "Senior Full Stack Developer" },
-            company: "Technology Company",
-            description: {
-                es: "Responsable de decisiones técnicas, revisión de código y acompañamiento técnico al equipo.",
-                en: "Responsible for technical decisions, code reviews, and mentoring team members."
-            }
-        },
-        {
-            year: { es: "2021 - 2023", en: "2021 - 2023" },
-            role: { es: "Full Stack Developer", en: "Full Stack Developer" },
-            company: "Startup",
-            description: {
-                es: "Desarrollo de nuevas funcionalidades y mejora continua del producto.",
-                en: "Developed new features and contributed to continuous product improvement."
-            }
-        },
-        {
-            year: { es: "2019 - 2021", en: "2019 - 2021" },
-            role: { es: "Junior Developer", en: "Junior Developer" },
-            company: "Digital Agency",
-            description: {
-                es: "Primeras experiencias profesionales enfocadas en frontend y automatización.",
-                en: "First professional experience focused on frontend and automation."
-            }
-        }
-    ],
-
-    coreValues: [
-        {
-            icon: "🧠",
-            title: { es: "Pensamiento crítico", en: "Critical Thinking" },
-            desc: {
-                es: "Analizo los problemas desde la raíz para proponer soluciones efectivas.",
-                en: "I analyze problems from the ground up to propose effective solutions."
-            }
-        },
-        {
-            icon: "⚡",
-            title: { es: "Eficiencia", en: "Efficiency" },
-            desc: {
-                es: "Busco soluciones simples, escalables y sostenibles.",
-                en: "I aim for simple, scalable, and sustainable solutions."
-            }
-        },
-        {
-            icon: "🤝",
-            title: { es: "Trabajo en equipo", en: "Teamwork" },
-            desc: {
-                es: "La colaboración y la comunicación clara son clave para el éxito.",
-                en: "Collaboration and clear communication are key to success."
-            }
-        }
-    ],
-
-    faqItems: [
-        {
-            q: {
-                es: "¿Qué tipo de proyectos realizas?",
-                en: "What type of projects do you work on?"
-            },
-            a: {
-                es: "Trabajo en aplicaciones web, plataformas internas, APIs y soluciones personalizadas.",
-                en: "I work on web applications, internal platforms, APIs, and custom solutions."
-            }
-        },
-        {
-            q: {
-                es: "¿Trabajas de forma remota?",
-                en: "Do you work remotely?"
-            },
-            a: {
-                es: "Sí, trabajo de forma remota con clientes y equipos de diferentes regiones.",
-                en: "Yes, I work remotely with clients and teams from different regions."
-            }
-        },
-        {
-            q: {
-                es: "¿Cómo manejas la comunicación?",
-                en: "How do you handle communication?"
-            },
-            a: {
-                es: "Mantengo comunicación clara y constante mediante reuniones, reportes y seguimiento.",
-                en: "I maintain clear and constant communication through meetings, reports, and follow-ups."
-            }
-        }
-    ],
-
-    socialLinks: {
-        github: "https://github.com/username",
-        linkedin: "https://www.linkedin.com/in/username/",
-        email: "contact@example.com"
+  experience: [
+    {
+      company: "Tech Company, Inc.",
+      role: { es: "Desarrollador Web Fullstack", en: "Fullstack Web Developer" },
+      duration: { es: "2023 - Actualidad", en: "2023 - Present" },
+      description: {
+        es: "Desarrollo funcionalidades de producto en un entorno ágil, colaborando con diseño y backend. Me enfoco en rendimiento, accesibilidad y calidad de código.",
+        en: "I build product features in an agile environment, collaborating with design and backend. I focus on performance, accessibility, and code quality."
+      }
     },
+    {
+      company: "Startup Studio",
+      role: { es: "Ingeniero de Software", en: "Software Engineer" },
+      duration: { es: "2021 - 2023", en: "2021 - 2023" },
+      description: {
+        es: "Construí módulos frontend y APIs para varios productos, mejorando tiempos de carga y flujos críticos de negocio.",
+        en: "Built frontend modules and APIs for multiple products, improving load times and critical business flows."
+      }
+    },
+    {
+      company: "Digital Agency",
+      role: { es: "Desarrollador Junior", en: "Junior Developer" },
+      duration: { es: "2019 - 2021", en: "2019 - 2021" },
+      description: {
+        es: "Participé en sitios y apps para clientes, trabajando en UI, integraciones y mantenimiento.",
+        en: "Worked on client sites and apps, handling UI, integrations, and maintenance."
+      }
+    }
+  ],
 
-    categories: [
-        { id: "all", label: { es: "Todos", en: "All" } },
-        { id: "frontend", label: { es: "Frontend", en: "Frontend" } },
-        { id: "backend", label: { es: "Backend", en: "Backend" } },
-        { id: "full-stack", label: { es: "Full-Stack", en: "Full-Stack" } }
-    ],
+  coreExpertise: [
+    {
+      title: { es: "Ingeniería Frontend", en: "Frontend Engineering" },
+      desc: { es: "Vue/Nuxt, React, TypeScript, UI Systems", en: "Vue/Nuxt, React, TypeScript, UI Systems" }
+    },
+    {
+      title: { es: "Desarrollo Backend", en: "Backend Development" },
+      desc: { es: "APIs, Spring Boot, .NET, Node.js", en: "APIs, Spring Boot, .NET, Node.js" }
+    },
+    {
+      title: { es: "Arquitectura", en: "Architecture" },
+      desc: { es: "Clean Architecture, DDD, Event-driven", en: "Clean Architecture, DDD, Event-driven" }
+    },
+    {
+      title: { es: "Bases de Datos", en: "Databases" },
+      desc: { es: "PostgreSQL, MySQL, Modeling", en: "PostgreSQL, MySQL, Modeling" }
+    },
+    {
+      title: { es: "DevOps", en: "DevOps" },
+      desc: { es: "Docker, CI/CD, Deployments", en: "Docker, CI/CD, Deployments" }
+    }
+  ],
 
-    projects: [
+  experienceTimeline: [
+    {
+      year: { es: "2023 - Actualidad", en: "2023 - Present" },
+      role: { es: "Senior Full Stack Developer", en: "Senior Full Stack Developer" },
+      company: "Tech Company",
+      description: {
+        es: "Liderando entregas, buenas prácticas y decisiones de arquitectura a nivel producto.",
+        en: "Leading delivery, best practices, and product-level architecture decisions."
+      }
+    },
+    {
+      year: { es: "2021 - 2023", en: "2021 - 2023" },
+      role: { es: "Full Stack Engineer", en: "Full Stack Engineer" },
+      company: "StartUp Inc",
+      description: {
+        es: "Construí features end-to-end y mejoré performance y observabilidad.",
+        en: "Built end-to-end features and improved performance and observability."
+      }
+    },
+    {
+      year: { es: "2019 - 2021", en: "2019 - 2021" },
+      role: { es: "Junior Developer", en: "Junior Developer" },
+      company: "Web Agency",
+      description: {
+        es: "Colaboré en múltiples proyectos web, desde UI hasta integraciones.",
+        en: "Contributed to multiple web projects, from UI to integrations."
+      }
+    }
+  ],
+
+  coreValues: [
+    {
+      icon: "🎯",
+      title: { es: "Calidad primero", en: "Quality First" },
+      desc: { es: "Código claro, mantenible y medible.", en: "Clear, maintainable, measurable code." }
+    },
+    {
+      icon: "🚀",
+      title: { es: "Mejora continua", en: "Continuous Improvement" },
+      desc: { es: "Itero, mido y optimizo sin drama.", en: "Iterate, measure, and optimize without drama." }
+    },
+    {
+      icon: "🤝",
+      title: { es: "Trabajo en equipo", en: "Teamwork" },
+      desc: { es: "Comunicación honesta y objetivos compartidos.", en: "Honest communication and shared goals." }
+    }
+  ],
+
+  faqItems: [
+    {
+      q: { es: "¿Cuál es tu timeline típico para un proyecto?", en: "What’s your typical timeline for a project?" },
+      a: {
+        es: "Depende del alcance. Un landing o MVP pequeño puede tomar 2–4 semanas. Productos más completos suelen ir de 6–12 semanas.",
+        en: "It depends on scope. A small landing or MVP can take 2–4 weeks. More complete products usually take 6–12 weeks."
+      }
+    },
+    {
+      q: { es: "¿Trabajas con startups?", en: "Do you work with startups?" },
+      a: {
+        es: "Sí. Me adapto al ritmo y priorizamos lo que mueve la aguja: MVP, validación y mejoras por iteraciones.",
+        en: "Yes. I adapt to the pace and we prioritize what moves the needle: MVP, validation, and iterative improvements."
+      }
+    },
+    {
+      q: { es: "¿En qué tecnologías te especializas?", en: "What technologies do you specialize in?" },
+      a: {
+        es: "Principalmente TypeScript (Nuxt/Vue/React), APIs (Node/Spring/.NET), y bases de datos (PostgreSQL).",
+        en: "Mainly TypeScript (Nuxt/Vue/React), APIs (Node/Spring/.NET), and databases (PostgreSQL)."
+      }
+    },
+    {
+      q: { es: "¿Cómo manejas el soporte continuo?", en: "How do you handle ongoing support?" },
+      a: {
+        es: "Ofrezco soporte por bloques de horas o mensual: mantenimiento, mejoras y corrección de bugs.",
+        en: "I offer support via hour blocks or monthly: maintenance, improvements, and bug fixes."
+      }
+    },
+    {
+      q: { es: "¿Ofreces consultoría o code review?", en: "Do you offer consulting or code reviews?" },
+      a: {
+        es: "Sí: revisiones de PRs, auditoría rápida y recomendaciones accionables para mejorar arquitectura y DX.",
+        en: "Yes: PR reviews, quick audits, and actionable recommendations to improve architecture and DX."
+      }
+    }
+  ],
+
+  socialLinks: {
+    github: "https://github.com/example",
+    linkedin: "https://www.linkedin.com/in/example/",
+    email: "hello@example.com"
+  },
+
+  categories: [
+    { id: "all", label: { es: "Todos", en: "All" } },
+    { id: "frontend", label: { es: "Frontend", en: "Frontend" } },
+    { id: "backend", label: { es: "Backend", en: "Backend" } },
+    { id: "full-stack", label: { es: "Full-Stack", en: "Full-Stack" } }
+  ],
+
+  projects: [
+    {
+      id: 1,
+      title: { es: "Dashboard de Analítica", en: "Analytics Dashboard" },
+      description: {
+        es: "Panel de analítica con filtros, métricas y exportación.",
+        en: "Analytics dashboard with filters, metrics, and exports."
+      },
+      longDescription: {
+        es: "Proyecto demostrativo con autenticación, gráficas, tablas y estados vacíos. Incluye buenas prácticas de UI y manejo de errores.",
+        en: "Demo project with authentication, charts, tables, and empty states. Includes UI best practices and error handling."
+      },
+      tags: ["Frontend", "Nuxt", "TypeScript", "Charts"],
+      category: "frontend",
+      image: "/project-analytics-cover.jpg",
+      images: ["/project-analytics-1.jpg", "/project-analytics-2.jpg"],
+      features: [
+        { es: "Filtros avanzados y búsqueda", en: "Advanced filters and search" },
+        { es: "Gráficas y tablas responsivas", en: "Responsive charts and tables" },
+        { es: "Exportación CSV", en: "CSV export" },
+        { es: "Estados vacíos y manejo de errores", en: "Empty states and error handling" }
+      ],
+      techStack: [
         {
-            id: 1,
-            title: { es: "Plataforma de Microservicios", en: "MicroServices Platform" },
-            description: {
-                es: "Arquitectura de microservicios empresarial con patrones orientados a eventos y trazabilidad distribuida.",
-                en: "Enterprise-grade microservices architecture with event-driven design patterns and distributed tracing."
-            },
-            longDescription: {
-                es: "Plataforma de microservicios empresarial construida con principios de Domain-Driven Design (DDD) y arquitectura orientada a eventos. Incluye monitoreo distribuido, service mesh con Istio, y gestión centralizada de configuración.",
-                en: "Enterprise microservices platform built with Domain-Driven Design (DDD) and event-driven architecture. Includes distributed monitoring, an Istio service mesh, and centralized configuration management."
-            },
-            tags: ["DDD", "Microservices", "Node.js", "Docker"],
-            category: "backend",
-            image: "/microservices-architecture-dashboard.jpg",
-            images: ["/microservices-dashboard-metrics.jpg", "/distributed-tracing-visualization.png"],
-            features: [
-                { es: "Arquitectura basada en eventos con Kafka", en: "Event-driven architecture with Kafka" },
-                { es: "Service discovery con Consul", en: "Service discovery with Consul" },
-                { es: "API Gateway centralizado con autenticación JWT", en: "Centralized API Gateway with JWT auth" },
-                { es: "Monitoreo y trazabilidad distribuida con Jaeger", en: "Distributed monitoring and tracing with Jaeger" },
-                { es: "Circuit breaker y retry patterns", en: "Circuit breaker and retry patterns" },
-                { es: "Despliegue automatizado con CI/CD", en: "Automated deployments with CI/CD" }
-            ],
-            techStack: [
-                {
-                    name: { es: "Node.js + Express", en: "Node.js + Express" },
-                    description: {
-                        es: "Backend de microservicios con Express y TypeScript",
-                        en: "Microservices backend with Express and TypeScript"
-                    }
-                },
-                {
-                    name: { es: "Kafka", en: "Kafka" },
-                    description: {
-                        es: "Message broker para comunicación asíncrona",
-                        en: "Message broker for async communication"
-                    }
-                },
-                {
-                    name: { es: "Docker + Kubernetes", en: "Docker + Kubernetes" },
-                    description: {
-                        es: "Containerización y orquestación",
-                        en: "Containerization and orchestration"
-                    }
-                },
-                {
-                    name: { es: "PostgreSQL + Redis", en: "PostgreSQL + Redis" },
-                    description: {
-                        es: "Bases de datos relacionales y caching",
-                        en: "Relational databases and caching"
-                    }
-                }
-            ],
-            demo: "https://example.com",
-            github: "https://github.com",
-            hasDetails: true
+          name: { es: "Nuxt + Vue", en: "Nuxt + Vue" },
+          description: { es: "Interfaz con SSR/SPA híbrido", en: "UI with hybrid SSR/SPA" }
         },
         {
-            id: 2,
-            title: { es: "Plataforma E-commerce", en: "E-commerce Platform" },
-            description: {
-                es: "Solución e-commerce full-stack con pagos, inventario y panel de administración.",
-                en: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard."
-            },
-            longDescription: {
-                es: "Solución e-commerce full-stack con pagos, inventario y panel de administración.",
-                en: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard."
-            },
-            tags: ["Full-Stack", "Next.js", "Stripe", "PostgreSQL"],
-            category: "full-stack",
-            image: "/ecommerce-product-page.jpg",
-            demo: "https://example.com",
-            github: "https://github.com",
-            hasDetails: false
+          name: { es: "TypeScript", en: "TypeScript" },
+          description: { es: "Tipado y DX", en: "Typing and DX" }
         },
-    ]
+        {
+          name: { es: "Tailwind", en: "Tailwind" },
+          description: { es: "Diseño utilitario", en: "Utility-first styling" }
+        }
+      ],
+      demo: "https://example.com",
+      github: "https://github.com/example/repo",
+      hasDetails: true
+    },
+    {
+      id: 2,
+      title: { es: "API de Tareas", en: "Tasks API" },
+      description: {
+        es: "API REST con CRUD, validación y autenticación.",
+        en: "REST API with CRUD, validation, and authentication."
+      },
+      longDescription: {
+        es: "Proyecto demostrativo backend con endpoints documentados, validaciones y estructura limpia.",
+        en: "Demo backend project with documented endpoints, validations, and a clean structure."
+      },
+      tags: ["Backend", "API", "PostgreSQL"],
+      category: "backend",
+      image: "/project-api-cover.jpg",
+      demo: "https://example.com",
+      github: "https://github.com/example/repo-api",
+      hasDetails: false
+    }
+  ]
 }

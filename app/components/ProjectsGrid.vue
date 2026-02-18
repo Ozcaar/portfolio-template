@@ -147,6 +147,6 @@ const isActiveCategory = (category: { id: string }) => selectedCategory.value ==
 const filteredProjects = computed(() =>
   selectedCategory.value === allCategoryId.value
     ? projects.value
-    : projects.value.filter((p) => p.category === selectedCategory.value)
+    : projects.value.filter((p) => p.category === selectedCategory.value || p.category === 'full-stack')
 )
 </script>

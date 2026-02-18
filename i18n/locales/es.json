@@ -1,156 +1,156 @@
 {
-    "seo": {
-        "home": {
-            "title": "{name} - Full Stack Developer",
-            "description": "Desarrollador Full Stack especializado en aplicaciones modernas"
-        }
-    },
-    "common": {
-        "buttons": {
-            "getInTouch": "Contáctame",
-            "viewMyWork": "Ver mi trabajo",
-            "viewAllProjects": "Ver todos los proyectos",
-            "viewOnGitHub": "Ver en GitHub",
-            "submit": "Enviar mensaje",
-            "sending": "Enviando...",
-            "sended": "¡Mensaje enviado!",
-            "copyEmail": "Copiar correo",
-            "copiedEmail": "¡Correo copiado!"
-        },
-        "nav": {
-            "projects": "Proyectos",
-            "about": "Sobre mí",
-            "contact": "Contacto",
-            "backToHome": "Volver al inicio"
-        }
-    },
+  "seo": {
     "home": {
-        "hero": {
-            "intro": {
-                "role": "Desarrollador Full Stack",
-                "title": "Creando aplicaciones web modernas y escalables.",
-                "subtitle": "Especializado en DDD, microservicios y patrones de diseño bien pensados."
-            },
-            "techStack": {
-                "title": "Stack Tecnológico",
-                "footer": "Siempre aprendiendo y explorando"
-            },
-            "openSource": {
-                "title": "GitHub Stats",
-                "projects": "{count}+ proyectos",
-                "experience": "{count}+ años de experiencia",
-                "years": "Años en GitHub",
-                "repos": "Repos públicos",
-                "stars": "Stars",
-                "recientActivity": "Actividad (30d)",
-                "topLanguages": "Mis principales lenguajes en GitHub",
-                "error": "No se pudo cargar GitHub."
-            },
-            "experience": {
-                "title": "Experiencia"
-            },
-            "cta": {
-                "kicker": "¡Trabajemos Juntos!",
-                "availability": "Disponible",
-                "paragraph": " aplicaciones web modernas, escalables y bien diseñadas para que tu proyecto crezca con confianza.",
-                "bullet1": "Comunicación clara y directa.",
-                "bullet2": "Avances constantes y visibles.",
-                "bullet3": "Trabajo ordenado y de fácil mantenimiento.",
-                "bullet4": "Experiencia de usuario primero."
-            }
-        },
-        "projects": {
-            "title": "Proyectos Destacados",
-            "description": "Una selección de proyectos que muestran prácticas modernas de desarrollo full stack, arquitectura bien pensada y atención al detalle."
-        }
-    },
-    "about": {
-        "header": {
-            "badge": "SOBRE MÍ",
-            "subtitle": "Desarrollador full stack apasionado por crear soluciones elegantes y escalables con una arquitectura sólida y tecnologías modernas."
-        },
-        "resume": {
-            "title": "Mi Trayectoria",
-            "paragraph1": "Comencé mi camino en el desarrollo hace más de {years} años, iniciando en el frontend y expandiéndome gradualmente hacia la ingeniería full stack. Mi pasión por el código limpio y el diseño de sistemas me llevó a estudiar a fondo los patrones de arquitectura y Domain-Driven Design.",
-            "paragraph2": "Hoy me especializo en construir arquitecturas de microservicios, desarrollar aplicaciones en tiempo real y crear sistemas escalables que perduran en el tiempo. Creo firmemente en el poder del diseño consciente y las abstracciones limpias.",
-            "paragraph3": "Más allá de programar, me gusta compartir conocimiento escribiendo, contribuyendo a proyectos de código abierto y mentorando a desarrolladores junior. La web evoluciona constantemente, y yo también."
-        },
-        "coreExpertise": {
-            "title": "Experiencia Principal"
-        },
-        "experienceTimeline": {
-            "title": "Línea de Tiempo de Experiencia"
-        },
-        "coreValues": {
-            "title": "Valores Principales",
-            "values": {
-                "quality": {
-                    "title": "Calidad Primero",
-                    "desc": "Prioritizo la calidad del código y su mantenibilidad a largo plazo."
-                },
-                "collaboration": {
-                    "title": "Innovación y Aprendizaje Continuo",
-                    "desc": "Siempre explorando nuevas tecnologías y mejores enfoques."
-                },
-                "continuousLearning": {
-                    "title": "Colaboración",
-                    "desc": "Los grandes productos se construyen mediante el trabajo en equipo y una buena comunicación."
-                }
-            }
-        },
-        "cta": {
-            "kicker": "¿Te interesa trabajar juntos?",
-            "button": "Contáctame"
-        }
-    },
-    "contact": {
-        "header": {
-            "badge": "CONTACTO",
-            "title": "Trabajemos juntos",
-            "description": "¿Tienes un proyecto en mente o buscas a alguien para tu equipo?\nMe encantaría escucharte. Contáctame y creemos algo increíble."
-        },
-        "form": {
-            "title": "Envíame un Mensaje",
-            "name": {
-                "label": "Nombre",
-                "placeholder": "Tu nombre"
-            },
-            "email": {
-                "label": "Correo electrónico",
-                "placeholder": "tu{'@'}email.com"
-            },
-            "subject": {
-                "label": "Asunto",
-                "placeholder": "¿De qué trata tu proyecto?"
-            },
-            "message": {
-                "label": "Mensaje",
-                "placeholder": "Cuéntame más sobre tu proyecto, tiempos, presupuesto y cualquier detalle relevante..."
-            },
-            "successMessage": "¡Gracias por tu mensaje! Te responderé pronto.",
-            "errorMessage": "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
-        },
-        "contactInfo": {
-            "title": "Información de Contacto",
-            "email": "No dudes en escribirme por correo o conectar conmigo en redes sociales.",
-            "address": {
-                "label": "Ubicación",
-                "value": "MX Monterrey - Remoto / GMT-6"
-            },
-            "availability": {
-                "label": "Disponibilidad",
-                "value": "Lun - Vie, 9:00 AM - 6:00 PM"
-            }
-        },
-        "socialMedia": {
-            "title": "Redes Sociales"
-        },
-        "quickResponse": {
-            "title": "Respuesta rápida",
-            "description": "Normalmente respondo en un plazo de 24 a 48 horas. Para proyectos urgentes, indícalo en el asunto."
-        },
-        "faq": {
-            "title": "Preguntas Frecuentes"
-        }
+      "title": "{name} - Full Stack Developer",
+      "description": "Full Stack Developer focused on modern, scalable web applications"
     }
+  },
+  "common": {
+    "buttons": {
+      "getInTouch": "Get in Touch",
+      "viewMyWork": "View My Work",
+      "viewAllProjects": "View All Projects",
+      "viewOnGitHub": "View on GitHub",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "sended": "Message sent!",
+      "copyEmail": "Copy Email",
+      "copiedEmail": "Email copied!"
+    },
+    "nav": {
+      "projects": "Projects",
+      "about": "About",
+      "contact": "Contact",
+      "backToHome": "Back to Home"
+    }
+  },
+  "home": {
+    "hero": {
+      "intro": {
+        "role": "Full Stack Developer",
+        "title": "Building modern and scalable digital products.",
+        "subtitle": "Focused on clean architecture, performance, and thoughtful design."
+      },
+      "techStack": {
+        "title": "Tech Stack",
+        "footer": "Always learning and evolving"
+      },
+      "openSource": {
+        "title": "GitHub Overview",
+        "projects": "{count}+ projects",
+        "experience": "{count}+ years of experience",
+        "years": "Years on GitHub",
+        "repos": "Public Repositories",
+        "stars": "Stars",
+        "recientActivity": "Activity (30d)",
+        "topLanguages": "Top Languages",
+        "error": "Unable to load GitHub data."
+      },
+      "experience": {
+        "title": "Experience"
+      },
+      "cta": {
+        "kicker": "Let’s Build Something Great",
+        "availability": "Available for new opportunities",
+        "paragraph": "I create modern, scalable, and maintainable web applications designed to grow with your business.",
+        "bullet1": "Clear and transparent communication.",
+        "bullet2": "Consistent and measurable progress.",
+        "bullet3": "Clean and maintainable codebase.",
+        "bullet4": "User experience comes first."
+      }
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "description": "A curated selection of projects showcasing modern full stack practices, scalable architecture, and attention to detail."
+    }
+  },
+  "about": {
+    "header": {
+      "badge": "ABOUT",
+      "subtitle": "Full stack developer passionate about building elegant, scalable systems using modern technologies and solid architecture."
+    },
+    "resume": {
+      "title": "My Journey",
+      "paragraph1": "I began my development journey over {years} years ago, starting in frontend development and gradually expanding into full stack engineering. My interest in clean code and system design led me to explore architecture patterns deeply.",
+      "paragraph2": "Today, I focus on building scalable systems, well-structured APIs, and performance-oriented applications. I believe thoughtful architecture and simplicity lead to long-term success.",
+      "paragraph3": "Beyond coding, I enjoy sharing knowledge, contributing to open source, and continuously learning as technology evolves."
+    },
+    "coreExpertise": {
+      "title": "Core Expertise"
+    },
+    "experienceTimeline": {
+      "title": "Experience Timeline"
+    },
+    "coreValues": {
+      "title": "Core Values",
+      "values": {
+        "quality": {
+          "title": "Quality First",
+          "desc": "I prioritize clean, maintainable, and scalable solutions."
+        },
+        "collaboration": {
+          "title": "Continuous Learning",
+          "desc": "Constantly exploring new technologies and better approaches."
+        },
+        "continuousLearning": {
+          "title": "Collaboration",
+          "desc": "Great products are built through teamwork and clear communication."
+        }
+      }
+    },
+    "cta": {
+      "kicker": "Interested in working together?",
+      "button": "Contact Me"
+    }
+  },
+  "contact": {
+    "header": {
+      "badge": "CONTACT",
+      "title": "Let’s work together",
+      "description": "Have a project in mind or looking for a developer for your team?\nI'd love to hear from you."
+    },
+    "form": {
+      "title": "Send Me a Message",
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your{'@'}email.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "What is your project about?"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell me about your project, timeline, budget, and any relevant details..."
+      },
+      "successMessage": "Thank you for your message! I’ll get back to you soon.",
+      "errorMessage": "Message could not be sent. Please try again later."
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "email": "Feel free to reach out via email or connect through social media.",
+      "address": {
+        "label": "Location",
+        "value": "Remote / GMT-6"
+      },
+      "availability": {
+        "label": "Availability",
+        "value": "Mon - Fri, 9:00 AM - 6:00 PM"
+      }
+    },
+    "socialMedia": {
+      "title": "Social Media"
+    },
+    "quickResponse": {
+      "title": "Quick Response",
+      "description": "I typically respond within 24–48 hours. For urgent inquiries, please mention it in the subject line."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    }
+  }
 }
