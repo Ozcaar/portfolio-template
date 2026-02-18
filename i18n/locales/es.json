@@ -1,156 +1,156 @@
 {
   "seo": {
     "home": {
-      "title": "{name} - Full Stack Developer",
-      "description": "Full Stack Developer focused on modern, scalable web applications"
+      "title": "{name} - Desarrollador Full Stack",
+      "description": "Desarrollador Full Stack enfocado en productos digitales modernos y escalables"
     }
   },
   "common": {
     "buttons": {
-      "getInTouch": "Get in Touch",
-      "viewMyWork": "View My Work",
-      "viewAllProjects": "View All Projects",
-      "viewOnGitHub": "View on GitHub",
-      "submit": "Send Message",
-      "sending": "Sending...",
-      "sended": "Message sent!",
-      "copyEmail": "Copy Email",
-      "copiedEmail": "Email copied!"
+      "getInTouch": "Contáctame",
+      "viewMyWork": "Ver mi trabajo",
+      "viewAllProjects": "Ver todos los proyectos",
+      "viewOnGitHub": "Ver en GitHub",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "sended": "¡Mensaje enviado!",
+      "copyEmail": "Copiar correo",
+      "copiedEmail": "¡Correo copiado!"
     },
     "nav": {
-      "projects": "Projects",
-      "about": "About",
-      "contact": "Contact",
-      "backToHome": "Back to Home"
+      "projects": "Proyectos",
+      "about": "Sobre mí",
+      "contact": "Contacto",
+      "backToHome": "Volver al inicio"
     }
   },
   "home": {
     "hero": {
       "intro": {
-        "role": "Full Stack Developer",
-        "title": "Building modern and scalable digital products.",
-        "subtitle": "Focused on clean architecture, performance, and thoughtful design."
+        "role": "Desarrollador Full Stack",
+        "title": "Construyendo aplicaciones web escalables y bien estructuradas.",
+        "subtitle": "Enfocado en arquitectura limpia, rendimiento y diseño bien pensado."
       },
       "techStack": {
-        "title": "Tech Stack",
-        "footer": "Always learning and evolving"
+        "title": "Stack Tecnológico",
+        "footer": "Aprendiendo y mejorando continuamente"
       },
       "openSource": {
-        "title": "GitHub Overview",
-        "projects": "{count}+ projects",
-        "experience": "{count}+ years of experience",
-        "years": "Years on GitHub",
-        "repos": "Public Repositories",
-        "stars": "Stars",
-        "recientActivity": "Activity (30d)",
-        "topLanguages": "Top Languages",
-        "error": "Unable to load GitHub data."
+        "title": "Resumen de GitHub",
+        "projects": "{count}+ proyectos",
+        "experience": "{count}+ años de experiencia",
+        "years": "Años en GitHub",
+        "repos": "Repositorios públicos",
+        "stars": "Estrellas",
+        "recientActivity": "Actividad (30d)",
+        "topLanguages": "Lenguajes principales",
+        "error": "No se pudieron cargar los datos de GitHub."
       },
       "experience": {
-        "title": "Experience"
+        "title": "Experiencia"
       },
       "cta": {
-        "kicker": "Let’s Build Something Great",
-        "availability": "Available for new opportunities",
-        "paragraph": "I create modern, scalable, and maintainable web applications designed to grow with your business.",
-        "bullet1": "Clear and transparent communication.",
-        "bullet2": "Consistent and measurable progress.",
-        "bullet3": "Clean and maintainable codebase.",
-        "bullet4": "User experience comes first."
+        "kicker": "Construyamos Algo Increíble",
+        "availability": "Abierto a oportunidades",
+        "paragraph": "Diseño y desarrollo aplicaciones modernas y escalables, pensadas para crecer a largo plazo y mantenerse en el tiempo.",
+        "bullet1": "Comunicación clara y transparente.",
+        "bullet2": "Progreso constante y medible.",
+        "bullet3": "Arquitectura limpia y mantenible.",
+        "bullet4": "Enfoque centrado en el usuario."
       }
     },
     "projects": {
-      "title": "Featured Projects",
-      "description": "A curated selection of projects showcasing modern full stack practices, scalable architecture, and attention to detail."
+      "title": "Proyectos Destacados",
+      "description": "Una selección curada de proyectos que muestran prácticas modernas de desarrollo full stack, arquitectura escalable y atención al detalle."
     }
   },
   "about": {
     "header": {
-      "badge": "ABOUT",
-      "subtitle": "Full stack developer passionate about building elegant, scalable systems using modern technologies and solid architecture."
+      "badge": "SOBRE MÍ",
+      "subtitle": "Desarrollador full stack apasionado por crear sistemas elegantes y escalables utilizando tecnologías modernas y principios sólidos de arquitectura."
     },
     "resume": {
-      "title": "My Journey",
-      "paragraph1": "I began my development journey over {years} years ago, starting in frontend development and gradually expanding into full stack engineering. My interest in clean code and system design led me to explore architecture patterns deeply.",
-      "paragraph2": "Today, I focus on building scalable systems, well-structured APIs, and performance-oriented applications. I believe thoughtful architecture and simplicity lead to long-term success.",
-      "paragraph3": "Beyond coding, I enjoy sharing knowledge, contributing to open source, and continuously learning as technology evolves."
+      "title": "Mi Trayectoria",
+      "paragraph1": "Mi camino en el desarrollo comenzó hace más de {years} años, iniciando en el frontend y expandiéndome gradualmente hacia la ingeniería full stack. Con el tiempo desarrollé un fuerte interés por el código limpio, los patrones de arquitectura y el diseño de sistemas.",
+      "paragraph2": "Hoy me enfoco en construir sistemas escalables, APIs bien estructuradas y aplicaciones orientadas al rendimiento. Creo que una arquitectura bien pensada y la simplicidad conducen a productos sostenibles.",
+      "paragraph3": "Más allá de programar, disfruto aprender, compartir conocimiento, contribuir a proyectos de código abierto y seguir perfeccionando mis habilidades a medida que la tecnología evoluciona."
     },
     "coreExpertise": {
-      "title": "Core Expertise"
+      "title": "Experiencia Principal"
     },
     "experienceTimeline": {
-      "title": "Experience Timeline"
+      "title": "Línea de Tiempo Profesional"
     },
     "coreValues": {
-      "title": "Core Values",
+      "title": "Valores Principales",
       "values": {
         "quality": {
-          "title": "Quality First",
-          "desc": "I prioritize clean, maintainable, and scalable solutions."
+          "title": "Calidad Primero",
+          "desc": "Priorizando soluciones mantenibles, escalables y bien probadas."
         },
         "collaboration": {
-          "title": "Continuous Learning",
-          "desc": "Constantly exploring new technologies and better approaches."
+          "title": "Crecimiento Continuo",
+          "desc": "Aprendiendo y mejorando constantemente a través de nuevos desafíos."
         },
         "continuousLearning": {
-          "title": "Collaboration",
-          "desc": "Great products are built through teamwork and clear communication."
+          "title": "Colaboración",
+          "desc": "Los productos sólidos se construyen mediante el trabajo en equipo y una comunicación efectiva."
         }
       }
     },
     "cta": {
-      "kicker": "Interested in working together?",
-      "button": "Contact Me"
+      "kicker": "¿Te interesa colaborar?",
+      "button": "Contáctame"
     }
   },
   "contact": {
     "header": {
-      "badge": "CONTACT",
-      "title": "Let’s work together",
-      "description": "Have a project in mind or looking for a developer for your team?\nI'd love to hear from you."
+      "badge": "CONTACTO",
+      "title": "Trabajemos Juntos",
+      "description": "¿Tienes un proyecto en mente o buscas un desarrollador para tu equipo?\nConectemos y construyamos algo significativo."
     },
     "form": {
-      "title": "Send Me a Message",
+      "title": "Enviar un Mensaje",
       "name": {
-        "label": "Name",
-        "placeholder": "Your name"
+        "label": "Nombre",
+        "placeholder": "Tu nombre"
       },
       "email": {
-        "label": "Email",
-        "placeholder": "your{'@'}email.com"
+        "label": "Correo electrónico",
+        "placeholder": "tu{'@'}email.com"
       },
       "subject": {
-        "label": "Subject",
-        "placeholder": "What is your project about?"
+        "label": "Asunto",
+        "placeholder": "¿De qué trata tu proyecto?"
       },
       "message": {
-        "label": "Message",
-        "placeholder": "Tell me about your project, timeline, budget, and any relevant details..."
+        "label": "Mensaje",
+        "placeholder": "Comparte detalles sobre tu proyecto, tiempos, objetivos y cualquier información relevante..."
       },
-      "successMessage": "Thank you for your message! I’ll get back to you soon.",
-      "errorMessage": "Message could not be sent. Please try again later."
+      "successMessage": "¡Gracias por tu mensaje! Te responderé lo antes posible.",
+      "errorMessage": "No se pudo enviar el mensaje. Por favor, inténtalo más tarde."
     },
     "contactInfo": {
-      "title": "Contact Information",
-      "email": "Feel free to reach out via email or connect through social media.",
+      "title": "Información de Contacto",
+      "email": "No dudes en escribirme por correo o conectar a través de redes sociales.",
       "address": {
-        "label": "Location",
-        "value": "Remote / GMT-6"
+        "label": "Ubicación",
+        "value": "Remoto"
       },
       "availability": {
-        "label": "Availability",
-        "value": "Mon - Fri, 9:00 AM - 6:00 PM"
+        "label": "Disponibilidad",
+        "value": "Lun – Vie, 9:00 AM – 6:00 PM"
       }
     },
     "socialMedia": {
-      "title": "Social Media"
+      "title": "Redes Sociales"
     },
     "quickResponse": {
-      "title": "Quick Response",
-      "description": "I typically respond within 24–48 hours. For urgent inquiries, please mention it in the subject line."
+      "title": "Tiempo de Respuesta",
+      "description": "Normalmente respondo en un plazo de 24–48 horas. Para asuntos urgentes, menciónalo en el asunto."
     },
     "faq": {
-      "title": "Frequently Asked Questions"
+      "title": "Preguntas Frecuentes"
     }
   }
 }
